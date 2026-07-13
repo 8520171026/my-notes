@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WorkBuddy AI 工具实战 · 33 件神器导航</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#ffffff; --ink:#1f2937; --sub:#6b7280;
+    --line:#e5e7eb; --accent:#2563eb;
+    --cA:#0ea5e9; --cB:#8b5cf6; --cC:#f59e0b; --cD:#ec4899; --cE:#10b981; --cM:#64748b;
+    --lvX:#16a34a; --lvJ:#2563eb;
+    --stOk:#dcfce7; --stOkInk:#15803d; --stWarn:#ffedd5; --stWarnInk:#c2410c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",Segoe UI,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.6;padding:0 0 60px}
+  .hero{max-width:1200px;margin:0 auto;padding:48px 24px 28px}
+  .hero h1{font-size:34px;font-weight:800;letter-spacing:-.5px}
+  .hero .tag{display:inline-block;margin-top:14px;padding:5px 14px;border-radius:999px;
+    background:#eef2ff;color:var(--accent);font-size:14px;font-weight:600}
+  .hero p{margin-top:14px;color:var(--sub);font-size:16px;max-width:760px}
+  .search{max-width:1200px;margin:0 auto;padding:0 24px 18px}
+  .search input{width:100%;padding:14px 18px;font-size:16px;border:1px solid var(--line);
+    border-radius:12px;background:#fff;outline:none;transition:.15s}
+  .search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px #dbeafe}
+  .tabs{max-width:1200px;margin:0 auto;padding:6px 24px 22px;display:flex;flex-wrap:wrap;gap:10px}
+  .tab{padding:8px 16px;border:1px solid var(--line);background:#fff;border-radius:999px;
+    font-size:14px;cursor:pointer;color:var(--sub);transition:.15s;user-select:none}
+  .tab:hover{border-color:var(--accent);color:var(--accent)}
+  .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .grid{max-width:1200px;margin:0 auto;padding:0 24px;
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;
+    display:flex;flex-direction:column;gap:10px;transition:.18s;position:relative;overflow:hidden}
+  .card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(15,23,42,.10);border-color:#cbd5e1}
+  .card .cat{position:absolute;top:0;left:0;width:5px;height:100%}
+  .card .head{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .card .name{font-size:18px;font-weight:700}
+  .card .en{font-size:12px;color:var(--sub);font-family:ui-monospace,Menlo,monospace}
+  .card .desc{font-size:14px;color:#374151;flex:1}
+  .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+  .b{font-size:12px;font-weight:600;padding:3px 10px;border-radius:8px}
+  .b-lvX{background:var(--stOk);color:var(--stOkInk)}
+  .b-lvJ{background:#dbeafe;color:var(--lvJ)}
+  .b-ok{background:var(--stOk);color:var(--stOkInk)}
+  .b-warn{background:var(--stWarn);color:var(--stWarnInk)}
+  .card .more{display:inline-block;margin-top:auto;padding-top:4px;color:var(--accent);font-size:13px;font-weight:600;text-decoration:none}
+  .card .more:hover{text-decoration:underline}
+  .count{text-align:center;color:var(--sub);font-size:13px;margin:26px 0 0}
+  footer{max-width:1200px;margin:40px auto 0;padding:24px;text-align:center;
+    color:var(--sub);font-size:13px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+  <div class="hero">
+    <h1>WorkBuddy AI 工具实战 · 33 件神器导航</h1>
+    <span class="tag">边学边分享 · 小白版 + 进阶版 · 持续更新</span>
+    <p>这里收录了 WorkBuddy 里全部 33 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯五大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
+  </div>
+
+  <div class="search">
+    <input id="q" type="text" placeholder="搜索工具名 / 英文名 / 用途关键词，例如：PPT、股票、邮件、GitHub…" oninput="render()">
+  </div>
+
+  <div class="tabs" id="tabs">
+    <div class="tab active" data-cat="all">全部 33</div>
+    <div class="tab" data-cat="A">办公协作 6</div>
+    <div class="tab" data-cat="B">开发提效 6</div>
+    <div class="tab" data-cat="C">金融投资 6</div>
+    <div class="tab" data-cat="D">设计创作 10</div>
+    <div class="tab" data-cat="E">资讯内容 4</div>
+    <div class="tab" data-cat="M">元工具 1</div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+  <div class="count" id="count"></div>
+
+  <footer>
+    内容中枢 · 多平台分享钩子入口 ｜ 导航站由 WorkBuddy 生成 ｜ 每掌握一个工具即更新一篇「小白版 + 进阶版」
+  </footer>
+
+<script>
+const CAT = {
+  A:{name:"办公协作",c:"var(--cA)"},
+  B:{name:"开发提效",c:"var(--cB)"},
+  C:{name:"金融投资",c:"var(--cC)"},
+  D:{name:"设计创作",c:"var(--cD)"},
+  E:{name:"资讯内容",c:"var(--cE)"},
+  M:{name:"元工具",c:"var(--cM)"}
+};
+const TOOLS = [
+  // A 办公协作
+  {name:"飞书套件",en:"lark-unified",cat:"A",desc:"消息、文档、日历、审批、多维表格……飞书能干啥它都能用话术调度。",level:"进阶",status:"需连账号",connect:"飞书"},
+  {name:"钉钉套件",en:"dingtalk-unified",cat:"A",desc:"钉钉党专属：发消息、建群、管日程、走审批，一句话搞定。",level:"进阶",status:"需连账号",connect:"钉钉"},
+  {name:"邮件收发",en:"imap-smtp-email",cat:"A",desc:"任意邮箱收发信、带附件，再也不用在不同客户端切来切去。",level:"小白",status:"即装即用"},
+  {name:"腾讯乐享知识库",en:"lexiang-knowledge-base",cat:"A",desc:"把资料喂给知识库，多模态问答还能顺手生成 PPT。",level:"进阶",status:"需连账号",connect:"乐享"},
+  {name:"腾讯文档路由",en:"tencent-docs-routing",cat:"A",desc:"直接打开 / 编辑你的腾讯文档，文档就在对话里。",level:"小白",status:"即装即用"},
+  {name:"本地 Office 编辑",en:"tencent-local-office-edit",cat:"A",desc:"本机 Word/Excel/PPT 实时读写，所见即所得。",level:"小白",status:"即装即用"},
+  // B 开发提效
+  {name:"GitHub 管理",en:"github",cat:"B",desc:"管 Issues、PR、CI 流水线，开发协作一把抓。",level:"进阶",status:"需连账号",connect:"GitHub"},
+  {name:"GitHub 热门项目",en:"github-trending-cn",cat:"B",desc:"今日 / 本周最火仓库一目了然，找灵感学趋势。",level:"小白",status:"即装即用"},
+  {name:"GitHub AI 趋势追踪",en:"github-ai-trends",cat:"B",desc:"专盯 AI 热门项目榜单，跟进行业不掉队。",level:"小白",status:"即装即用"},
+  {name:"网页自动化",en:"agent-browser-core",cat:"B",desc:"用命令行操控浏览器：导航、填表、截图、抓数据。",level:"进阶",status:"即装即用"},
+  {name:"创建 Skill",en:"skill-creator",cat:"B",desc:"手把手教你造一个属于自己的 AI 技能。",level:"进阶",status:"即装即用"},
+  {name:"专家管理",en:"expert-manager",cat:"B",desc:"把开源项目转成专家包，或管理你的专家库。",level:"进阶",status:"即装即用"},
+  // C 金融投资
+  {name:"腾讯自选股 · 金融数据",en:"westockdata",cat:"C",desc:"A 股港股美股，K 线、财报、资金流向一键查。",level:"小白",status:"即装即用"},
+  {name:"金融总入口",en:"wb-finance-skill",cat:"C",desc:"投资 / 股票 / 基金 / 宏观……金融问题总入口。",level:"进阶",status:"即装即用"},
+  {name:"市场数据查询",en:"westock-data",cat:"C",desc:"行情、财报、研报、公告，结构化数据随便查。",level:"进阶",status:"即装即用"},
+  {name:"选股选基工具",en:"westock-tool",cat:"C",desc:"按条件 / 策略 / 标签批量筛选股票和 ETF。",level:"进阶",status:"即装即用"},
+  {name:"自然语言金融查询",en:"neodata-financial-search",cat:"C",desc:"说人话查金融：『茅台最近咋样』直接出数据。",level:"小白",status:"即装即用"},
+  {name:"小白理财教练",en:"xiaobai-coach",cat:"C",desc:"用生活类比讲理财 / 基金 / 定投，不荐股只启蒙。",level:"小白",status:"即装即用"},
+  // D 设计创作
+  {name:"Ardot 设计核心",en:"ardot-design-core",cat:"D",desc:"Ardot 设计中枢，承上启下调度设计能力。",level:"进阶",status:"即装即用"},
+  {name:"Ardot 设计路由",en:"ardot-design-router",cat:"D",desc:"把设计任务精准分发给合适的设计模块。",level:"进阶",status:"即装即用"},
+  {name:"设计转代码",en:"ardot-design-to-code",cat:"D",desc:"设计稿一键变前端代码，设计师也能产出页面。",level:"进阶",status:"即装即用"},
+  {name:"海报设计",en:"ardot-poster",cat:"D",desc:"说一句主题，AI 给你出一张能用的海报。",level:"小白",status:"即装即用"},
+  {name:"幻灯片设计",en:"ardot-slides",cat:"D",desc:"AI 生成幻灯片，汇报前救急神器。",level:"小白",status:"即装即用"},
+  {name:"UI 设计",en:"ardot-ui-design",cat:"D",desc:"描述界面需求，AI 生成可参考的 UI 稿。",level:"小白",status:"即装即用"},
+  {name:"多模态生成",en:"buddy-multimodal-generation",cat:"D",desc:"文生 3D 模型、图片套视频特效，创意拉满。",level:"小白",status:"即装即用"},
+  {name:"PPT 演示文稿",en:"pptx-generator",cat:"D",desc:"一句话生成可编辑 PowerPoint，告别排版焦虑。",level:"小白",status:"即装即用",detail:"pptx-generator.html"},
+  {name:"去 AI 味",en:"humanizer",cat:"D",desc:"把 AI 腔文案改成人话，发公众号不尴尬。",level:"小白",status:"即装即用"},
+  {name:"文档转 Markdown",en:"markitdown-skill",cat:"D",desc:"PDF/Word/PPT/图片/音频，通通转成 Markdown。",level:"小白",status:"即装即用"},
+  // E 资讯内容
+  {name:"腾讯新闻",en:"tencent-news",cat:"E",desc:"7×24 热榜、早晚报、实时资讯，天下事一袋装。",level:"小白",status:"即装即用"},
+  {name:"SkillHub 每日推荐",en:"skillhub-daily",cat:"E",desc:"每天扫 Top100 好 Skill 精准推给你，发现神器。",level:"小白",status:"即装即用"},
+  {name:"长文写作",en:"fbs-bookwriter",cat:"E",desc:"写书 / 白皮书 / 手册 / 长报告，结构化产出不卡壳。",level:"进阶",status:"即装即用"},
+  {name:"云部署",en:"cloudstudio-deploy",cat:"E",desc:"本地静态站一键部署到云端，发链接就能看。",level:"进阶",status:"即装即用"},
+  // M 元工具
+  {name:"市场安装器",en:"marketplace-skill-installer",cat:"M",desc:"一句话从推荐市场装 Skill，扩展能力零门槛。",level:"小白",status:"即装即用"}
+];
+
+let curCat = "all";
+document.getElementById("tabs").addEventListener("click", e=>{
+  if(!e.target.classList.contains("tab")) return;
+  document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
+  e.target.classList.add("active");
+  curCat = e.target.dataset.cat;
+  render();
+});
+
+function render(){
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const grid = document.getElementById("grid");
+  grid.innerHTML = "";
+  let n = 0;
+  TOOLS.forEach(t=>{
+    if(curCat!=="all" && t.cat!==curCat) return;
+    if(q){
+      const hay = (t.name+t.en+t.desc).toLowerCase();
+      if(!hay.includes(q)) return;
+    }
+    n++;
+    const cat = CAT[t.cat];
+    const lvCls = t.level==="小白" ? "b-lvX" : "b-lvJ";
+    const stCls = t.status==="即装即用" ? "b-ok" : "b-warn";
+    const stTxt = t.status==="即装即用" ? "即装即用" : ("需连"+t.connect);
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <div class="cat" style="background:${cat.c}"></div>
+      <div class="head">
+        <span class="name">${t.name}</span>
+        <span class="en">${t.en}</span>
+      </div>
+      <div class="desc">${t.desc}</div>
+      <div class="badges">
+        <span class="b" style="background:${cat.c}22;color:${cat.c}">${cat.name}</span>
+        <span class="b ${lvCls}">${t.level}向</span>
+        <span class="b ${stCls}">${stTxt}</span>
+      </div>
+      ${t.detail?`<a class="more" href="${t.detail}">看详情 &rarr;</a>`:""}`;
+    grid.appendChild(card);
+  });
+  document.getElementById("count").textContent = `当前展示 ${n} 个工具`;
+}
+render();
+</script>
+</body>
+</html>
