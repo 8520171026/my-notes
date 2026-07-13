@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>n8n 工作流自动化 · 工具详情 | WorkBuddy AI 工具实战</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1f2937;--sub:#6b7280;--line:#e5e7eb;--accent:#7c3aed;--ok:#16a34a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 24px 70px}
+  .back{display:inline-block;color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;margin-bottom:18px}
+  .tag{display:inline-block;padding:4px 12px;border-radius:999px;background:#eef2ff;color:var(--accent);font-size:13px;font-weight:600;margin-bottom:12px}
+  h1{font-size:30px;font-weight:800}
+  .en{font-family:ui-monospace,Menlo,monospace;color:var(--sub);font-size:13px;margin-top:6px}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+  .m{font-size:12px;font-weight:600;padding:4px 11px;border-radius:8px;background:#eef2ff;color:#4338ca}
+  .m.ok{background:#dcfce7;color:#15803d}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px}
+  section h2{font-size:20px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--accent)}
+  h3{font-size:16px;margin:18px 0 8px;color:#111827}
+  p,li{color:#374151;font-size:15px}
+  ul,ol{padding-left:22px;margin:6px 0}
+  li{margin:5px 0}
+  .hook{background:#fffbeb;border-color:#fde68a}
+  .hook h2{border-color:#f59e0b}
+  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; 返回 AI 工具导航</a>
+  <div class="tag">元工具 · 进阶向</div>
+  <h1>n8n 工作流自动化</h1>
+  <div class="en">n8n-workflow-automation</div>
+  <div class="meta">
+    <span class="m">分类：元工具</span>
+    <span class="m ok">即装即用</span>
+    <span class="m">人群：进阶向</span>
+  </div>
+
+  <section>
+    <h2>小白版 · 3 分钟上手</h2>
+    <h3>一句话它是啥</h3>
+    <p>一个“帮你画自动化流程图”的工具——你描述需求，它直接产出带触发器、幂等、错误处理、重试、人工审核的 n8n 工作流 JSON。</p>
+    <h3>它能帮你干啥</h3>
+    <ul>
+      <li>想自动化重复活（同步数据、定时报表、消息转发），不会画流程；</li>
+      <li>给现有 n8n 流程补错误处理和重试；</li>
+      <li>做需要“人工审核”才能继续的半自动流程；</li>
+      <li>把 AI 能力和业务系统串起来。</li>
+    </ul>
+    <h3>3 步上手</h3>
+    <ol>
+      <li>说清你要自动化的场景和触发条件；</li>
+      <li>说「用 n8n 帮我出工作流」；</li>
+      <li>它产出可导入 n8n 的 JSON，你导入即跑。</li>
+    </ol>
+    <h3>常见坑</h3>
+    <ul>
+      <li>产出的是 n8n 能识别的 JSON，得有 n8n 环境才能跑；</li>
+      <li>涉及密钥/凭证的节点要你自己填，别把密码写进流程；</li>
+      <li>复杂分支逻辑最好先在小数据上测。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>进阶版 · 玩出花</h2>
+    <h3>进阶配置</h3>
+    <p>自带触发器、幂等（防重复执行）、错误处理、日志、重试、human-in-the-loop 审核队列等生产级模式。会主动规避“跑两遍”“出错全崩”等经典翻车。可指定并发、超时、告警方式。</p>
+    <h3>与其他工具组合</h3>
+    <ul>
+      <li>配「Gog」：把 Google 办公操作接进自动化；</li>
+      <li>配「Stock Analysis」：定时拉数据+预警；</li>
+      <li>配「clawdhub」：不够用时去市场搜现成节点/技能。</li>
+    </ul>
+    <h3>自动化玩法</h3>
+    <p>本身就是自动化生成器——把“描述需求→出可跑流程”固化，业务变动随改随出。</p>
+    <h3>边界与注意</h3>
+    <p>它出设计稿（JSON），真实运行依赖 n8n 和你的凭证；涉及钱/数据的节点务必加人工审核和权限管控。</p>
+  </section>
+
+  <section class="hook">
+    <h2>多平台衍生钩子</h2>
+    <ul>
+      <li><b>长文标题：</b>《不会写代码也能自动化：让 AI 画好你的工作流》</li>
+      <li><b>PPT 大纲（5 页）：</b>封面 → 什么是工作流自动化 → 生产级要素 → 3 个场景 → 行动号召</li>
+      <li><b>短视频钩子（15s）：</b>「每天重复的点点点？让它画个流程自己跑。」</li>
+    </ul>
+  </section>
+
+  <footer>WorkBuddy AI 工具实战 · 边学边分享 · 每掌握一个工具更新一篇</footer>
+</div>
+</body>
+</html>
