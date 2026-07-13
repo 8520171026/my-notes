@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>腾讯新闻 · 工具详情 | WorkBuddy AI 工具实战</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1f2937;--sub:#6b7280;--line:#e5e7eb;--accent:#f97316;--ok:#16a34a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 24px 70px}
+  .back{display:inline-block;color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;margin-bottom:18px}
+  .tag{display:inline-block;padding:4px 12px;border-radius:999px;background:#ffedd5;color:var(--accent);font-size:13px;font-weight:600;margin-bottom:12px}
+  h1{font-size:30px;font-weight:800}
+  .en{font-family:ui-monospace,Menlo,monospace;color:var(--sub);font-size:13px;margin-top:6px}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+  .m{font-size:12px;font-weight:600;padding:4px 11px;border-radius:8px;background:#eef2ff;color:#4338ca}
+  .m.ok{background:#dcfce7;color:#15803d}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px}
+  section h2{font-size:20px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--accent)}
+  h3{font-size:16px;margin:18px 0 8px;color:#111827}
+  p,li{color:#374151;font-size:15px}
+  ul,ol{padding-left:22px;margin:6px 0}
+  li{margin:5px 0}
+  .hook{background:#fffbeb;border-color:#fde68a}
+  .hook h2{border-color:#f59e0b}
+  .hook code{background:#fef3c7;padding:2px 6px;border-radius:5px;font-size:13px}
+  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; 返回 33 件神器导航</a>
+  <div class="tag">E 资讯内容 · 小白向</div>
+  <h1>腾讯新闻</h1>
+  <div class="en">tencent-news</div>
+  <div class="meta">
+    <span class="m">分类：资讯内容</span>
+    <span class="m ok">即装即用（需配免费 Key）</span>
+    <span class="m">人群：小白向</span>
+  </div>
+
+  <section>
+    <h2>小白版 · 3 分钟上手</h2>
+    <h3>一句话它是啥</h3>
+    <p>一个 7×24 在线的新闻情报兵——你开口问「今天有啥大事」「来份早报」，它就把腾讯新闻的热点、实时资讯、领域新闻整理好喂给你，还能顺手查天气。</p>
+    <h3>它能帮你干啥</h3>
+    <ul>
+      <li>不想刷信息流、又怕错过大事：直接问「今天热点」「本周 AI 圈发生了啥」；</li>
+      <li>早报 / 晚报：早上来一句「给我今天的早报」，通勤路上秒掌握全局；</li>
+      <li>领域追踪：指定「只看财经 / 军事 / 科技」，不走神在无关信息上；</li>
+      <li>天气查询：顺手问「北京今天天气」，出行前心里有数。</li>
+    </ul>
+    <h3>3 步上手</h3>
+    <ol>
+      <li>首次用先配个免费 Key（去 news.qq.com/exchange?scene=appkey 拿，然后跟我说「把 Key 设上」）；</li>
+      <li>直接说人话：「今天有啥重要新闻？」「来份科技早报」「查下上海天气」；</li>
+      <li>它按热点 / 分类把标题、来源、摘要、原文链接整理好给你，点链接看详情。</li>
+    </ol>
+    <h3>常见坑</h3>
+    <ul>
+      <li><b>不配 Key 拉不到新闻</b>：这是最容易卡的点，去拿个免费 Key 设上就行（一次搞定）；</li>
+      <li>它只走腾讯新闻自家的源，拉不到时会老实告诉你，不会拿别处内容糊弄你；</li>
+      <li>「定时推送」要配合定时任务才能每天自动发，单次问是即问即答。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>进阶版 · 玩出花</h2>
+    <h3>进阶配置</h3>
+    <p>底层是 <code>tencent-news-cli</code>，所有调用走 <code>run-cli</code> 脚本（别手敲底层路径）；API Key 用 <code>apikey-set KEY</code> 配置、<code>apikey-get</code> 查看、<code>apikey-clear</code> 清除（Key 是裸值，不加引号）；版本过旧用 <code>update</code> 自升级，环境异常先跑 <code>cli-state</code> 看诊断 JSON。</p>
+    <h3>与其他工具组合</h3>
+    <ul>
+      <li>配「长文写作 / PPT」：先把今日热点抓来当选题和素材，再一键成文或成稿；</li>
+      <li>配「去 AI 味」：新闻摘要润色后发公众号，不机械；</li>
+      <li>配「AI 绘图」：挑一条热榜，配张封面图做短视频选题。</li>
+    </ul>
+    <h3>自动化玩法</h3>
+    <p>接定时任务：每天早 8 点自动拉早报，做你的「信息早餐」；多领域（科技 + 财经 + 军事）分别定时，拼成一份私人简报。</p>
+    <h3>边界与注意</h3>
+    <p>只信自家源：CLI 拉取失败时明确报错、绝不回退到搜索引擎替代——这是设计原则；子命令和参数随版本变，实战以 <code>help</code> 实时输出为准；macOS 遇 Gatekeeper 拦 CLI，去「系统设置 → 隐私与安全性 → 仍要打开」放行即可。</p>
+  </section>
+
+  <section class="hook">
+    <h2>多平台衍生钩子</h2>
+    <ul>
+      <li><b>长文标题：</b>《不想刷信息流？让 AI 每天给你煮一份新闻早报》</li>
+      <li><b>PPT 大纲（5 页）：</b>封面 → 信息焦虑痛点 → 3 个核心能力（热榜/早报/领域）→ 真实用法 → 行动号召</li>
+      <li><b>短视频钩子（15s）：</b>「每天花 10 秒问一句，AI 帮你把天下事装进手机。」</li>
+    </ul>
+  </section>
+
+  <footer>WorkBuddy AI 工具实战 · 边学边分享 · 每掌握一个工具更新一篇</footer>
+</div>
+</body>
+</html>
