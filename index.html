@@ -58,6 +58,14 @@
   .combo-card .ct{font-size:18px;font-weight:700;color:#7c3aed}
   .combo-card .cd{font-size:14px;color:#4b5563}
   .combo-card .cm{font-size:13px;font-weight:600;color:#db2777;margin-top:4px}
+  .deriv{max-width:1200px;margin:8px auto 0;padding:0 24px}
+  .deriv h2{font-size:17px;margin:6px 0 12px;color:#111827;font-weight:700}
+  .deriv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+  .deriv-card{display:flex;flex-direction:column;gap:6px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:16px;padding:20px 22px;text-decoration:none;transition:.18s}
+  .deriv-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(16,185,129,.14)}
+  .deriv-card .dt{font-size:18px;font-weight:700;color:#059669}
+  .deriv-card .dd{font-size:14px;color:#374151}
+  .deriv-card .dm{font-size:13px;font-weight:600;color:#047857;margin-top:4px}
 </style>
 </head>
 <body>
@@ -89,6 +97,21 @@
       <span class="cd">写完稿子先去过遍 AI 味，再一键生成幻灯片——避免满屏机器腔。</span>
       <span class="cm">看组合教程 &rarr;</span>
     </a>
+  </div>
+  <div class="deriv">
+    <h2>已实做成品（一份素材，三处复用）</h2>
+    <div class="deriv-grid">
+      <a class="deriv-card" href="https://raw.githubusercontent.com/8520171026/my-notes/master/ppt/humanizer.pptx">
+        <span class="dt">去 AI 味 · PPT 演示文稿</span>
+        <span class="dd">5 页可编辑幻灯片：封面 / AI 味的样子 / 露馅套路 / 去味对比 / 行动号召。</span>
+        <span class="dm">下载 .pptx &rarr;</span>
+      </a>
+      <a class="deriv-card" href="https://raw.githubusercontent.com/8520171026/my-notes/master/videos/humanizer_demo.mp4">
+        <span class="dt">去 AI 味 · 短视频 15s</span>
+        <span class="dd">竖屏口播短视频，演示「AI 套话 → 去味变人话」的魔法。</span>
+        <span class="dm">观看 / 下载 .mp4 &rarr;</span>
+      </a>
+    </div>
   </div>
   <div class="count" id="count"></div>
 
