@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clawdbot 文档专家 · 工具详情 | WorkBuddy AI 工具实战</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1f2937;--sub:#6b7280;--line:#e5e7eb;--accent:#0ea5e9;--ok:#16a34a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 24px 70px}
+  .back{display:inline-block;color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;margin-bottom:18px}
+  .tag{display:inline-block;padding:4px 12px;border-radius:999px;background:#e0f2fe;color:var(--accent);font-size:13px;font-weight:600;margin-bottom:12px}
+  h1{font-size:30px;font-weight:800}
+  .en{font-family:ui-monospace,Menlo,monospace;color:var(--sub);font-size:13px;margin-top:6px}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+  .m{font-size:12px;font-weight:600;padding:4px 11px;border-radius:8px;background:#eef2ff;color:#4338ca}
+  .m.ok{background:#dcfce7;color:#15803d}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px}
+  section h2{font-size:20px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--accent)}
+  h3{font-size:16px;margin:18px 0 8px;color:#111827}
+  p,li{color:#374151;font-size:15px}
+  ul,ol{padding-left:22px;margin:6px 0}
+  li{margin:5px 0}
+  .hook{background:#fffbeb;border-color:#fde68a}
+  .hook h2{border-color:#f59e0b}
+  .hook code{background:#fef3c7;padding:2px 6px;border-radius:5px;font-size:13px}
+  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; 返回 35 件神器导航</a>
+  <div class="tag">A 办公协作 · 小白向</div>
+  <h1>Clawdbot 文档专家</h1>
+  <div class="en">clawddocs</div>
+  <div class="meta">
+    <span class="m">分类：办公协作</span>
+    <span class="m ok">即装即用</span>
+    <span class="m">人群：小白向</span>
+    <span class="m">来源：clawhub.ai 第三方</span>
+  </div>
+
+  <section>
+    <h2>小白版 · 3 分钟上手</h2>
+    <h3>一句话它是啥</h3>
+    <p>一个"Clawdbot 文档导航员"——你问 Clawdbot 怎么配、哪里报错、某个功能是啥，它用一套决策树帮你精准定位到对应的官方文档页，还能跑搜索脚本、抓取具体文档、追踪版本变化。简单说：你不用自己翻文档海洋，它替你指路。</p>
+    <h3>它能帮你干啥</h3>
+    <ul>
+      <li>配置 Clawdbot：provider（Discord/Telegram/WhatsApp…）、网关、自动化、各平台安装；</li>
+      <li>排查"为啥 X 不工作"——通用问题、provider 专属、浏览器工具类分别指路；</li>
+      <li>搜文档、按关键词做全文检索，或拉取某一篇具体文档页；</li>
+      <li>版本追踪：给文档拍快照，比对改动，升级不掉队。</li>
+    </ul>
+    <h3>3 步上手</h3>
+    <ol>
+      <li>把你的 Clawdbot 相关问题发给我（"网关怎么配""定时任务咋弄"都行）；</li>
+      <li>说一句「用 clawddocs 帮我查」；</li>
+      <li>我返回定位到的文档路径 ＋ 关键配置片段，你照着抄即可。</li>
+    </ol>
+    <h3>常见坑</h3>
+    <ul>
+      <li>它只懂 Clawdbot 一家的文档，不是通用搜索引擎，别拿它查别的；</li>
+      <li>全文索引依赖 <code>qmd</code> 先建索引（<code>build-index.sh fetch</code> → <code>build</code>）；</li>
+      <li>前提是——你真在用 Clawdbot；在 WorkBuddy 里它主要当"参考资料"看。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>进阶版 · 玩出花</h2>
+    <h3>进阶配置</h3>
+    <p>核心是那张决策树：按"怎么搭 / 为啥挂 / 怎么配 / 是啥 / 怎么自动化 / 怎么装"把问题分流到 <code>providers/</code>、<code>gateway/</code>、<code>concepts/</code>、<code>automation/</code>、<code>install/</code>、<code>platforms/</code> 等文档区。技能自带一组脚本（都在 <code>./scripts/</code>）：</p>
+    <ul>
+      <li>核心：<code>sitemap.sh</code> 看全部分类、<code>cache.sh status/refresh</code> 管缓存；</li>
+      <li>搜索发现：<code>search.sh 关键词</code>、<code>recent.sh 7</code>（近 N 天更新）、<code>fetch-doc.sh 路径</code>；</li>
+      <li>全文索引：<code>build-index.sh fetch/build/search "短语"</code>；</li>
+      <li>版本追踪：<code>track-changes.sh snapshot</code> 存档比对。</li>
+    </ul>
+    <h3>与其他工具组合</h3>
+    <ul>
+      <li>配「ClawdHub 技能市场 CLI」：查到好技能，直接用 <code>clawdhub install</code> 装下来，导航＋安装一条龙；</li>
+      <li>配「创建 Skill」：看懂 Clawdbot 文档后，照着给自己的智能体写技能。</li>
+    </ul>
+    <h3>边界与注意</h3>
+    <p>它只服务于 Clawdbot 生态，离了这家就抓瞎；脚本依赖 bash ＋ 可选的 <code>qmd</code> 工具；在 WorkBuddy 里建议当"文档地图"参考，别指望它直接改你的 Clawdbot 实例。</p>
+  </section>
+
+  <section class="hook">
+    <h2>多平台衍生钩子</h2>
+    <ul>
+      <li><b>长文标题：</b>《把 Clawdbot 配明白：一份"文档导航术"省下三天踩坑》</li>
+      <li><b>PPT 大纲（5 页）：</b>封面 → 什么是文档导航员 → 决策树怎么分流 → 搜索/索引/版本追踪 → 行动号召</li>
+      <li><b>短视频钩子（15s）：</b>「Clawdbot 文档多到看晕？一句话让它帮你指到那一篇。」</li>
+    </ul>
+  </section>
+
+  <footer>WorkBuddy AI 工具实战 · 边学边分享 · 每掌握一个工具更新一篇</footer>
+</div>
+</body>
+</html>

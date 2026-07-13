@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WorkBuddy AI 工具实战 · 33 件神器导航</title>
+<title>WorkBuddy AI 工具实战 · 35 件神器导航</title>
 <style>
   :root{
     --bg:#f6f7f9; --card:#ffffff; --ink:#1f2937; --sub:#6b7280;
@@ -70,9 +70,9 @@
 </head>
 <body>
   <div class="hero">
-    <h1>WorkBuddy AI 工具实战 · 33 件神器导航</h1>
+    <h1>WorkBuddy AI 工具实战 · 35 件神器导航</h1>
     <span class="tag">边学边分享 · 小白版 + 进阶版 · 持续更新</span>
-    <p>这里收录了 WorkBuddy 里全部 33 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯五大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
+    <p>这里收录了 WorkBuddy 里全部 35 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯五大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
   </div>
 
   <div class="search">
@@ -80,13 +80,13 @@
   </div>
 
   <div class="tabs" id="tabs">
-    <div class="tab active" data-cat="all">全部 33</div>
-    <div class="tab" data-cat="A">办公协作 6</div>
+    <div class="tab active" data-cat="all">全部 35</div>
+    <div class="tab" data-cat="A">办公协作 7</div>
     <div class="tab" data-cat="B">开发提效 6</div>
     <div class="tab" data-cat="C">金融投资 6</div>
     <div class="tab" data-cat="D">设计创作 10</div>
     <div class="tab" data-cat="E">资讯内容 4</div>
-    <div class="tab" data-cat="M">元工具 1</div>
+    <div class="tab" data-cat="M">元工具 2</div>
   </div>
 
   <div class="grid" id="grid"></div>
@@ -136,6 +136,7 @@ const TOOLS = [
   {name:"腾讯乐享知识库",en:"lexiang-knowledge-base",cat:"A",desc:"把资料喂给知识库，多模态问答还能顺手生成 PPT。",level:"进阶",status:"需连账号",connect:"乐享"},
   {name:"腾讯文档路由",en:"tencent-docs-routing",cat:"A",desc:"直接打开 / 编辑你的腾讯文档，文档就在对话里。",level:"小白",status:"即装即用"},
   {name:"本地 Office 编辑",en:"tencent-local-office-edit",cat:"A",desc:"本机 Word/Excel/PPT 实时读写，所见即所得。",level:"小白",status:"即装即用"},
+  {name:"Clawdbot 文档专家",en:"clawddocs",cat:"A",desc:"Clawdbot 文档导航员：决策树定位文档、搜文档、抓具体页、版本追踪（clawhub.ai 第三方技能）。",level:"小白",status:"即装即用",detail:"clawddocs.html"},
   // B 开发提效
   {name:"GitHub 管理",en:"github",cat:"B",desc:"管 Issues、PR、CI 流水线，开发协作一把抓。",level:"进阶",status:"需连账号",connect:"GitHub"},
   {name:"GitHub 热门项目",en:"github-trending-cn",cat:"B",desc:"今日 / 本周最火仓库一目了然，找灵感学趋势。",level:"小白",status:"即装即用"},
@@ -167,7 +168,8 @@ const TOOLS = [
   {name:"长文写作",en:"fbs-bookwriter",cat:"E",desc:"写书 / 白皮书 / 手册 / 长报告，结构化产出不卡壳。",level:"进阶",status:"即装即用",detail:"fbs-bookwriter.html"},
   {name:"云部署",en:"cloudstudio-deploy",cat:"E",desc:"本地静态站一键部署到云端，发链接就能看。",level:"进阶",status:"即装即用"},
   // M 元工具
-  {name:"市场安装器",en:"marketplace-skill-installer",cat:"M",desc:"一句话从推荐市场装 Skill，扩展能力零门槛。",level:"小白",status:"即装即用"}
+  {name:"市场安装器",en:"marketplace-skill-installer",cat:"M",desc:"一句话从推荐市场装 Skill，扩展能力零门槛。",level:"小白",status:"即装即用"},
+  {name:"ClawdHub 技能市场 CLI",en:"clawdhub",cat:"M",desc:"命令行技能商店：从 clawhub.com 搜 / 装 / 更新 / 发布 AI 技能（clawhub.ai 第三方技能）。",level:"小白",status:"即装即用",detail:"clawdhub.html"}
 ];
 
 let curCat = "all";
