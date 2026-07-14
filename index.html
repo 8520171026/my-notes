@@ -8,7 +8,7 @@
   :root{
     --bg:#f6f7f9; --card:#ffffff; --ink:#1f2937; --sub:#6b7280;
     --line:#e5e7eb; --accent:#2563eb;
-    --cA:#0ea5e9; --cB:#8b5cf6; --cC:#f59e0b; --cD:#ec4899; --cE:#10b981; --cM:#64748b;
+    --cA:#0ea5e9; --cB:#8b5cf6; --cC:#f59e0b; --cD:#ec4899; --cE:#10b981; --cM:#64748b; --cF:#ec4899;
     --lvX:#16a34a; --lvJ:#2563eb;
     --stOk:#dcfce7; --stOkInk:#15803d; --stWarn:#ffedd5; --stWarnInk:#c2410c;
   }
@@ -70,9 +70,9 @@
 </head>
 <body>
   <div class="hero">
-    <h1>WorkBuddy AI 工具实战 · 69 件神器导航</h1>
+    <h1>WorkBuddy AI 工具实战 · 77 件神器导航</h1>
     <span class="tag">边学边分享 · 小白版 + 进阶版 · 持续更新</span>
-    <p>这里收录了 WorkBuddy 里全部 69 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯、偏门六大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
+    <p>这里收录了 WorkBuddy 里全部 77 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯、偏门六大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
   </div>
 
   <div class="search">
@@ -80,13 +80,13 @@
   </div>
 
   <div class="tabs" id="tabs">
-    <div class="tab active" data-cat="all">全部 69</div>
+    <div class="tab active" data-cat="all">全部 77</div>
     <div class="tab" data-cat="A">办公协作 10</div>
     <div class="tab" data-cat="B">开发提效 8</div>
     <div class="tab" data-cat="C">金融投资 9</div>
     <div class="tab" data-cat="D">设计创作 19</div>
     <div class="tab" data-cat="E">资讯内容 6</div>
-    <div class="tab" data-cat="F">偏门神器 13</div>
+    <div class="tab" data-cat="F">偏门神器 21</div>
     <div class="tab" data-cat="M">元工具 4</div>
   </div>
 
@@ -207,6 +207,14 @@ const TOOLS = [
   {name:"Brainstorming 创意构思工作坊",en:"brainstorming",cat:"F",desc:"任何创意/功能/改动前先用：一次一问把模糊想法磨成可落地设计文档，YAGNI 砍多余（clawhub.ai 第三方技能，14092 下载）。",level:"通用",status:"即装即用",detail:"brainstorming.html"},
   {name:"Content Research Writer 带引用写作",en:"content-research-writer",cat:"F",desc:"写作搭档：边研究边写、加引用、改钩子、逐段反馈，保留你声音，支持博客/教程/技术文档（awesome 合集第三方技能）。",level:"通用",status:"即装即用",detail:"content-research-writer.html"},
   {name:"Deep Research Gemini 自主研究",en:"deep-research",cat:"F",desc:"调 Google Gemini Deep Research Agent 跑自主多步研究：规划/搜索/阅读/综合成带引用报告，2-10 分钟出，单次 $2-5（GitHub 第三方技能，需 Gemini API Key）。",level:"进阶",status:"需 Gemini Key",connect:"Gemini"},
+  {name:"抽奖赢家抽取器",en:"raffle-winner-picker",cat:"F",desc:"公平随机抽中奖者：支持 CSV/Excel/Google Sheets/名单，加密随机+去重+可验证，社媒抽奖/活动/团队随机分配一把抓（awesome 合集第三方技能）。",level:"小白",status:"即装即用",detail:"raffle-winner-picker.html"},
+  {name:"YouTube 视频下载器",en:"video-downloader",cat:"F",desc:"用 yt-dlp 把 YouTube 视频下到本地：可选清晰度(1080p/720p)/格式(mp4/webm/mkv)/仅音频转 MP3，离线看与素材收集（awesome 合集第三方技能）。",level:"小白",status:"即装即用",detail:"video-downloader.html"},
+  {name:"定制简历生成器",en:"tailored-resume-generator",cat:"F",desc:"分析 JD+你的背景，生成量身定制、ATS 友好的多版简历，量化成就、映射到岗位要求，转行/海投/应届都能用（awesome 合集第三方技能）。",level:"通用",status:"即装即用",detail:"tailored-resume-generator.html"},
+  {name:"Canvas 艺术海报设计",en:"canvas-design",cat:"F",desc:"先写『设计哲学』宣言再生成博物馆级 PNG/PDF 视觉作品，极简文字+大师手作感，海报/艺术图/品牌视觉反对 AI 味（awesome 合集第三方技能）。",level:"进阶",status:"即装即用",detail:"canvas-design.html"},
+  {name:"域名头脑风暴",en:"domain-name-brainstormer",cat:"F",desc:"按项目生成创意域名并跨 .com/.io/.ai 等多后缀查真实可注册状态，首选被占即给替代，起名+查可用一条龙（awesome 合集第三方技能）。",level:"小白",status:"即装即用",detail:"domain-name-brainstormer.html"},
+  {name:"发票收据整理器",en:"invoice-organizer",cat:"F",desc:"读乱糟发票/收据，提取供应商/日期/金额/描述，统一重命名+按供应商/年份归档，生成给会计的 CSV，报税季救星（awesome 合集第三方技能）。",level:"通用",status:"即装即用",detail:"invoice-organizer.html"},
+  {name:"文件整理器",en:"file-organizer",cat:"F",desc:"理解你的文件结构，找重复、建议更好归类、确认后自动清理归置，Downloads 救火/重复清理/项目重构/老文件归档（awesome 合集第三方技能）。",level:"通用",status:"即装即用",detail:"file-organizer.html"},
+  {name:"Slack GIF 生成器",en:"slack-gif-creator",cat:"F",desc:"为 Slack 造优化动图：消息 GIF(≤2MB)与 emoji GIF(≤64KB)自带尺寸校验，动画原语(shake/bounce/spin…)自由组合（awesome 合集第三方技能，需 pillow）。",level:"进阶",status:"即装即用",detail:"slack-gif-creator.html"},
   // M 元工具
   {name:"市场安装器",en:"marketplace-skill-installer",cat:"M",desc:"一句话从推荐市场装 Skill，扩展能力零门槛。",level:"小白",status:"即装即用"},
   {name:"ClawdHub 技能市场 CLI",en:"clawdhub",cat:"M",desc:"命令行技能商店：从 clawhub.com 搜 / 装 / 更新 / 发布 AI 技能（clawhub.ai 第三方技能）。",level:"小白",status:"即装即用",detail:"clawdhub.html"},
