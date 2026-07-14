@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing 写作风格自适应 · 工具详情 | WorkBuddy AI 工具实战</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1f2937;--sub:#6b7280;--line:#e5e7eb;--accent:#be185d;--ok:#16a34a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 24px 70px}
+  .back{display:inline-block;color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;margin-bottom:18px}
+  .tag{display:inline-block;padding:4px 12px;border-radius:999px;background:#fce7f3;color:var(--accent);font-size:13px;font-weight:600;margin-bottom:12px}
+  h1{font-size:30px;font-weight:800}
+  .en{font-family:ui-monospace,Menlo,monospace;color:var(--sub);font-size:13px;margin-top:6px}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+  .m{font-size:12px;font-weight:600;padding:4px 11px;border-radius:8px;background:#fce7f3;color:#be185d}
+  .m.ok{background:#dcfce7;color:#15803d}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px}
+  section h2{font-size:20px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--accent)}
+  h3{font-size:16px;margin:18px 0 8px;color:#111827}
+  p,li{color:#374151;font-size:15px}
+  ul,ol{padding-left:22px;margin:6px 0}
+  li{margin:5px 0}
+  .hook{background:#fffbeb;border-color:#fde68a}
+  .hook h2{border-color:#f59e0b}
+  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; 返回 AI 工具导航</a>
+  <div class="tag">偏门神器 · 写作向</div>
+  <h1>Writing 写作风格自适应</h1>
+  <div class="en">writing</div>
+  <div class="meta">
+    <span class="m">分类：偏门神器</span>
+    <span class="m ok">即装即用</span>
+    <span class="m">人群：常写作者</span>
+  </div>
+
+  <section>
+    <h2>小白版 · 3 分钟上手</h2>
+    <h3>一句话它是啥</h3>
+    <p>一个“记住你写作习惯”的工具——你写啥风格，它就学啥风格，下次帮你写/改时自动贴合你的声音，不擅自“纠正”成官方腔。</p>
+    <h3>它能帮你干啥</h3>
+    <ul>
+      <li>写邮件/博客/公号时，自动用你的口吻，不串味；</li>
+      <li>改稿时只改错字语病，不动你的个性表达；</li>
+      <li>跨会话记住你的偏好（博客啥调性、邮件啥格式）；</li>
+      <li>每次写前先读你的记忆文件，统一输出风格。</li>
+    </ul>
+    <h3>3 步上手</h3>
+    <ol>
+      <li>装好技能，首次会让它在 <code>~/writing/</code> 建记忆目录；</li>
+      <li>正常让它帮你写/改，顺口说一句“我习惯……”；</li>
+      <li>它把你的声音存进 memory.md，下次自动套用。</li>
+    </ol>
+    <h3>常见坑</h3>
+    <ul>
+      <li>记忆文件在本地 <code>~/writing/</code>，删了就失忆，重要偏好勤备份；</li>
+      <li>它“学你”不是“教你”，别指望它帮你改文风方向；</li>
+      <li>多项目可建 <code>projects/</code> 子目录分场景存声音。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>进阶版 · 玩出花</h2>
+    <h3>分层记忆机制</h3>
+    <p>偏好按“热度”存放：HOT（memory.md，核心偏好常驻）、WARM（projects/，某项目加载）、COLD（archive/，90 天没用转冷归档）。被用 3 次/7 天自动升 HOT，30 天没用降 WARM，90 天归档——不用你手动管。</p>
+    <h3>触发与查询</h3>
+    <ul>
+      <li>检测到“帮我写/改一下/这像我吗”等信号自动进写作模式；</li>
+      <li>“我的文风是啥？”→ 显示 memory.md Voice 段；</li>
+      <li>“忘掉我的风格”→ 先确认再清（不偷偷删）。</li>
+    </ul>
+    <h3>与其他工具组合</h3>
+    <ul>
+      <li>配「去 AI 味」：代写稿子更有本人味；</li>
+      <li>配「内容营销」：营销文案统一品牌声音；</li>
+      <li>配「语法 Grammar」：先定风格再改错字，两步分离更干净。</li>
+    </ul>
+    <h3>边界与注意</h3>
+    <p>只存“偏好”不存“写过的正文”，不上网、不碰 <code>~/writing/</code> 外的文件；风格判断靠例子，给的样本越多越准。</p>
+  </section>
+
+  <section class="hook">
+    <h2>多平台衍生钩子</h2>
+    <ul>
+      <li><b>长文标题：</b>《别再让 AI 把你的稿子写成“官方通稿”——用记忆锁死你的声音》</li>
+      <li><b>PPT 大纲（5 页）：</b>封面 → 写作风格丢失的痛 → 分层记忆怎么工作 → 3 个组合玩法 → 行动号召</li>
+      <li><b>短视频钩子（15s）：</b>「每次让 AI 帮你写都像换个人？给它装个‘声音记忆’就对了。」</li>
+    </ul>
+  </section>
+
+  <footer>WorkBuddy AI 工具实战 · 边学边分享 · 每掌握一个工具更新一篇</footer>
+</div>
+</body>
+</html>

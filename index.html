@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WorkBuddy AI 工具实战 · 63 件神器导航</title>
+<title>WorkBuddy AI 工具实战 · 69 件神器导航</title>
 <style>
   :root{
     --bg:#f6f7f9; --card:#ffffff; --ink:#1f2937; --sub:#6b7280;
@@ -70,9 +70,9 @@
 </head>
 <body>
   <div class="hero">
-    <h1>WorkBuddy AI 工具实战 · 63 件神器导航</h1>
+    <h1>WorkBuddy AI 工具实战 · 69 件神器导航</h1>
     <span class="tag">边学边分享 · 小白版 + 进阶版 · 持续更新</span>
-    <p>这里收录了 WorkBuddy 里全部 63 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯、偏门六大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
+    <p>这里收录了 WorkBuddy 里全部 69 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯、偏门六大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
   </div>
 
   <div class="search">
@@ -80,13 +80,13 @@
   </div>
 
   <div class="tabs" id="tabs">
-    <div class="tab active" data-cat="all">全部 63</div>
+    <div class="tab active" data-cat="all">全部 69</div>
     <div class="tab" data-cat="A">办公协作 10</div>
     <div class="tab" data-cat="B">开发提效 8</div>
     <div class="tab" data-cat="C">金融投资 9</div>
     <div class="tab" data-cat="D">设计创作 19</div>
     <div class="tab" data-cat="E">资讯内容 6</div>
-    <div class="tab" data-cat="F">偏门神器 7</div>
+    <div class="tab" data-cat="F">偏门神器 13</div>
     <div class="tab" data-cat="M">元工具 4</div>
   </div>
 
@@ -201,6 +201,12 @@ const TOOLS = [
   {name:"Music 个人音乐库",en:"music",cat:"F",desc:"私人音乐管理系统：收藏/演出/听歌记忆全记下，按场景歌单+主动提醒，纯本地 markdown（clawhub.ai 第三方技能）。",level:"通用",status:"即装即用",detail:"music.html"},
   {name:"Learning 自适应学习",en:"learning",cat:"F",desc:"自适应学习陪跑：自动摸清你咋学最好，把教学风格/格式/深度调成你的偏好（clawhub.ai 第三方技能）。",level:"通用",status:"即装即用",detail:"learning.html"},
   {name:"PDA 任务重构",en:"pda-reframing",cat:"F",desc:"PDA 自闭症辅助：把\"你必须做 X\"重构成探索/自主式语言，降低需求回避焦虑，真尊重自主权（GitHub 第三方技能，有社会价值）。",level:"通用",status:"即装即用",detail:"pda-reframing.html"},
+  {name:"Writing 写作风格自适应",en:"writing",cat:"F",desc:"写作风格记忆体：记住你的声音/格式偏好，跨会话贴合你文风，只改错字不擅自‘纠正’成官方腔（clawhub.ai 第三方技能，本地 ~/writing/）。",level:"通用",status:"即装即用",detail:"writing.html"},
+  {name:"Content Marketing 内容营销",en:"content-marketing",cat:"F",desc:"内容生产流水线：编辑日历+漏斗对齐+一篇多变体裂变，记住品牌声音（clawhub.ai 第三方技能，本地 ~/content-marketing/）。",level:"通用",status:"即装即用",detail:"content-marketing.html"},
+  {name:"Grammar 语法校对",en:"grammar",cat:"F",desc:"只改真错误（拼写/语法/标点/一致），绝不擅自‘润色’成另一种味，多语言自适应（clawhub.ai 第三方技能）。",level:"通用",status:"即装即用",detail:"grammar.html"},
+  {name:"Brainstorming 创意构思工作坊",en:"brainstorming",cat:"F",desc:"任何创意/功能/改动前先用：一次一问把模糊想法磨成可落地设计文档，YAGNI 砍多余（clawhub.ai 第三方技能，14092 下载）。",level:"通用",status:"即装即用",detail:"brainstorming.html"},
+  {name:"Content Research Writer 带引用写作",en:"content-research-writer",cat:"F",desc:"写作搭档：边研究边写、加引用、改钩子、逐段反馈，保留你声音，支持博客/教程/技术文档（awesome 合集第三方技能）。",level:"通用",status:"即装即用",detail:"content-research-writer.html"},
+  {name:"Deep Research Gemini 自主研究",en:"deep-research",cat:"F",desc:"调 Google Gemini Deep Research Agent 跑自主多步研究：规划/搜索/阅读/综合成带引用报告，2-10 分钟出，单次 $2-5（GitHub 第三方技能，需 Gemini API Key）。",level:"进阶",status:"需 Gemini Key",connect:"Gemini"},
   // M 元工具
   {name:"市场安装器",en:"marketplace-skill-installer",cat:"M",desc:"一句话从推荐市场装 Skill，扩展能力零门槛。",level:"小白",status:"即装即用"},
   {name:"ClawdHub 技能市场 CLI",en:"clawdhub",cat:"M",desc:"命令行技能商店：从 clawhub.com 搜 / 装 / 更新 / 发布 AI 技能（clawhub.ai 第三方技能）。",level:"小白",status:"即装即用",detail:"clawdhub.html"},

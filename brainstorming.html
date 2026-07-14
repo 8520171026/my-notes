@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brainstorming 创意构思工作坊 · 工具详情 | WorkBuddy AI 工具实战</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1f2937;--sub:#6b7280;--line:#e5e7eb;--accent:#be185d;--ok:#16a34a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 24px 70px}
+  .back{display:inline-block;color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;margin-bottom:18px}
+  .tag{display:inline-block;padding:4px 12px;border-radius:999px;background:#fce7f3;color:var(--accent);font-size:13px;font-weight:600;margin-bottom:12px}
+  h1{font-size:30px;font-weight:800}
+  .en{font-family:ui-monospace,Menlo,monospace;color:var(--sub);font-size:13px;margin-top:6px}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+  .m{font-size:12px;font-weight:600;padding:4px 11px;border-radius:8px;background:#fce7f3;color:#be185d}
+  .m.ok{background:#dcfce7;color:#15803d}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px}
+  section h2{font-size:20px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--accent)}
+  h3{font-size:16px;margin:18px 0 8px;color:#111827}
+  p,li{color:#374151;font-size:15px}
+  ul,ol{padding-left:22px;margin:6px 0}
+  li{margin:5px 0}
+  .hook{background:#fffbeb;border-color:#fde68a}
+  .hook h2{border-color:#f59e0b}
+  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; 返回 AI 工具导航</a>
+  <div class="tag">偏门神器 · 写作/创意向</div>
+  <h1>Brainstorming 创意构思工作坊</h1>
+  <div class="en">brainstorming</div>
+  <div class="meta">
+    <span class="m">分类：偏门神器</span>
+    <span class="m ok">即装即用</span>
+    <span class="m">人群：产品/创作者</span>
+  </div>
+
+  <section>
+    <h2>小白版 · 3 分钟上手</h2>
+    <h3>一句话它是啥</h3>
+    <p>任何“做功能/搭组件/加逻辑/改行为”之前先用的构思工作坊——通过一次一答把模糊想法磨成可落地的设计文档，而不是直接上手写代码。</p>
+    <h3>它能帮你干啥</h3>
+    <ul>
+      <li>先看清项目现状（文件/文档/近期提交），再问问题；</li>
+      <li>一次只问一个，多选优先，把想法逐步细化；</li>
+      <li>提 2-3 个方案并带权衡，亮出推荐项和理由；</li>
+      <li>把设计拆成 200-300 字小段呈现，每段确认“对不对”。</li>
+    </ul>
+    <h3>3 步上手</h3>
+    <ol>
+      <li>说“我想做 X”，它先翻你项目现状；</li>
+      <li>一次答它一个问题（多选就勾，开放也行）；</li>
+      <li>它分段抛出设计，你逐段确认，最后落盘到 <code>docs/plans/</code> 并提交。</li>
+    </ol>
+    <h3>常见坑</h3>
+    <ul>
+      <li>别一次甩一堆问题——它严格“一次一问”才顺；</li>
+      <li>YAGNI：所有设计先砍掉非必要功能；</li>
+      <li>哪里不对劲就回退澄清，它设计是可回退的。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>进阶版 · 玩出花</h2>
+    <h3>从构想到落地</h3>
+    <p>设计敲定后写进 <code>docs/plans/YYYY-MM-DD-&lt;topic&gt;-design.md</code>，可接 superpowers 的 git-worktree 开隔离工作区、writing-plans 出细化实现计划，一条龙从想法到 PR。</p>
+    <h3>核心原则</h3>
+    <ul>
+      <li>一次一问，不 overwhelm；</li>
+      <li>多选优先，比开放好答；</li>
+      <li>YAGNI  ruthlessly，砍多余；</li>
+      <li>永远先给 2-3 方案再定；</li>
+      <li>增量验证，分段呈现逐段确认；</li>
+      <li>灵活回退，不对就 clarify。</li>
+    </ul>
+    <h3>与其他工具组合</h3>
+    <ul>
+      <li>配「写作 Writing」：设计文档顺手统一文风；</li>
+      <li>配「内容营销」：创意点子直接进内容日历；</li>
+      <li>配「语法 Grammar」：设计稿落盘前过一遍错字。</li>
+    </ul>
+    <h3>边界与注意</h3>
+    <p>它是“想清楚再干”的刹车片，不替你写实现；设计文档提交前你仍要 review。</p>
+  </section>
+
+  <section class="hook">
+    <h2>多平台衍生钩子</h2>
+    <ul>
+      <li><b>长文标题：</b>《别一上来就写代码：用“构思工作坊”把烂点子磨成能交付的设计》</li>
+      <li><b>PPT 大纲（5 页）：</b>封面 → 为什么想清楚再干 → 一次一问怎么工作 → 3 个组合玩法 → 行动号召</li>
+      <li><b>短视频钩子（15s）：</b>「需求一接就开干？先让 AI 用‘一次一问’把你想法问明白了再动笔。」</li>
+    </ul>
+  </section>
+
+  <footer>WorkBuddy AI 工具实战 · 边学边分享 · 每掌握一个工具更新一篇</footer>
+</div>
+</body>
+</html>
