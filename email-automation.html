@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email 邮件自动化 · 工具详情 | WorkBuddy AI 工具实战</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1f2937;--sub:#6b7280;--line:#e5e7eb;--accent:#0891b2;--ok:#16a34a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 24px 70px}
+  .back{display:inline-block;color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;margin-bottom:18px}
+  .tag{display:inline-block;padding:4px 12px;border-radius:999px;background:#eef2ff;color:var(--accent);font-size:13px;font-weight:600;margin-bottom:12px}
+  h1{font-size:30px;font-weight:800}
+  .en{font-family:ui-monospace,Menlo,monospace;color:var(--sub);font-size:13px;margin-top:6px}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+  .m{font-size:12px;font-weight:600;padding:4px 11px;border-radius:8px;background:#eef2ff;color:#4338ca}
+  .m.warn{background:#ffedd5;color:#c2410c}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px}
+  section h2{font-size:20px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--accent)}
+  h3{font-size:16px;margin:18px 0 8px;color:#111827}
+  p,li{color:#374151;font-size:15px}
+  ul,ol{padding-left:22px;margin:6px 0}
+  li{margin:5px 0}
+  code{background:#f1f5f9;padding:2px 6px;border-radius:5px;font-size:13px;font-family:ui-monospace,Menlo,monospace}
+  .hook{background:#fffbeb;border-color:#fde68a}
+  .hook h2{border-color:#f59e0b}
+  .src{background:#f8fafc;border-color:#e2e8f0;font-size:13px;color:#64748b}
+  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; 返回 AI 工具导航</a>
+  <div class="tag">办公协作 · 进阶向</div>
+  <h1>Email 邮件自动化</h1>
+  <div class="en">email-automation</div>
+  <div class="meta">
+    <span class="m">分类：办公协作</span>
+    <span class="m warn">需邮箱授权</span>
+    <span class="m">人群：进阶向</span>
+  </div>
+
+  <section>
+    <h2>小白版 · 3 分钟上手</h2>
+    <h3>一句话它是啥</h3>
+    <p>一个“让 AI 帮你管邮箱”的工具——自动分拣、归类、草拟回复、清掉订阅和通知，把收件箱清零。支持 Gmail / Outlook / IMAP，不用手工一封封看。</p>
+    <h3>它能帮你干啥</h3>
+    <ul>
+      <li>AI 分析 incoming 邮件，按紧急度排优先级；</li>
+      <li>自动把邮件分进自定义分类（紧急/重要/订阅/通知/收据）；</li>
+      <li>给未读重要邮件草拟回复草稿，你只管看和发；</li>
+      <li>7 天前的订阅、3 天前的通知自动归档；</li>
+      <li>每天给你一份“省了多少时间”的收件箱报告。</li>
+    </ul>
+    <h3>3 步上手</h3>
+    <ol>
+      <li>配好邮箱（Gmail 最简单：开 Gmail API 拿 credentials.json）；</li>
+      <li>用大白话吩咐：“处理我的收件箱并归类”；</li>
+      <li>它跑完给你摘要+回复草稿，你点一下就发。</li>
+    </ol>
+    <h3>常见坑</h3>
+    <ul>
+      <li>首次要授权邮箱，涉及账号安全，授权范围看清楚；</li>
+      <li>自动归档不可逆，前一周先人工复核训练 AI；</li>
+      <li>用应用专用密码（app password）比普通密码安全。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>进阶版 · 玩出花</h2>
+    <h3>配置（环境变量）</h3>
+    <p><code>EMAIL_PROVIDER</code>（gmail/outlook/imap）、<code>EMAIL_ADDRESS</code>（必填）、<code>GMAIL_CREDENTIALS_FILE</code>、<code>OUTLOOK_ACCESS_TOKEN</code>、<code>IMAP_SERVER/USERNAME/PASSWORD</code>、<code>AUTO_ARCHIVE</code>、<code>CATEGORIES</code> 等。Gmail 走 API 最稳，Outlook 需 Azure 注册应用拿 Graph token。</p>
+    <h3>自定义规则（rules.yml）</h3>
+    <p>可按发件人 / 关键词设动作：boss 来信→标 urgent；含“ASAP”→标 urgent；订阅号→7 天归档；发票→打标签归档；带退订头→建议退订。</p>
+    <h3>与其他工具组合</h3>
+    <ul>
+      <li>配「语雀文档同步」：重要邮件一键归档成知识库条目；</li>
+      <li>配「去 AI 味」：AI 草拟的回复更有你本人味；</li>
+      <li>配「n8n 工作流」：邮件触发跨系统自动化。</li>
+    </ul>
+    <h3>边界与注意</h3>
+    <p>要邮箱授权，企业账号可能受限；自动归档有风险，关键动作加确认；敏感邮件注意合规与隐私。</p>
+  </section>
+
+  <section class="hook">
+    <h2>多平台衍生钩子</h2>
+    <ul>
+      <li><b>长文标题：</b>《收件箱清零术：让 AI 替你分拣、归类、回邮件》</li>
+      <li><b>PPT 大纲（5 页）：</b>封面 → 邮件为什么越堆越多 → AI 分拣三板斧 → 3 个真实省时场景 → 行动号召</li>
+      <li><b>短视频钩子（15s）：</b>「每天 47 封邮件？让 AI 3 分钟帮你清零。」</li>
+    </ul>
+  </section>
+
+  <section class="src">
+    <p>来源：clawhub.ai 第三方技能（作者 fly3094，MIT-0，1656 次下载）。本页依据其公开 SKILL.md 整理，安装与配置以原项目为准。本机安装：<code>clawhub install email-automation</code>。</p>
+  </section>
+
+  <footer>WorkBuddy AI 工具实战 · 边学边分享 · 每掌握一个工具更新一篇</footer>
+</div>
+</body>
+</html>

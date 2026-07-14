@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MLX Whisper 本地字幕 · 工具详情 | WorkBuddy AI 工具实战</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1f2937;--sub:#6b7280;--line:#e5e7eb;--accent:#db2777;--ok:#16a34a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 24px 70px}
+  .back{display:inline-block;color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;margin-bottom:18px}
+  .tag{display:inline-block;padding:4px 12px;border-radius:999px;background:#fce7f3;color:var(--accent);font-size:13px;font-weight:600;margin-bottom:12px}
+  h1{font-size:30px;font-weight:800}
+  .en{font-family:ui-monospace,Menlo,monospace;color:var(--sub);font-size:13px;margin-top:6px}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+  .m{font-size:12px;font-weight:600;padding:4px 11px;border-radius:8px;background:#fce7f3;color:#be185d}
+  .m.ok{background:#dcfce7;color:#15803d}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px}
+  section h2{font-size:20px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--accent)}
+  h3{font-size:16px;margin:18px 0 8px;color:#111827}
+  p,li{color:#374151;font-size:15px}
+  ul,ol{padding-left:22px;margin:6px 0}
+  li{margin:5px 0}
+  code{background:#f1f5f9;padding:2px 6px;border-radius:5px;font-size:13px;font-family:ui-monospace,Menlo,monospace}
+  table{border-collapse:collapse;width:100%;margin:8px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 10px;text-align:left}
+  th{background:#f8fafc;color:#111827}
+  .hook{background:#fffbeb;border-color:#fde68a}
+  .hook h2{border-color:#f59e0b}
+  .src{background:#f8fafc;border-color:#e2e8f0;font-size:13px;color:#64748b}
+  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; 返回 AI 工具导航</a>
+  <div class="tag">设计创作 · 进阶向</div>
+  <h1>MLX Whisper 本地字幕</h1>
+  <div class="en">mlx-whisper</div>
+  <div class="meta">
+    <span class="m">分类：设计创作（视频）</span>
+    <span class="m ok">即装即用（Mac）</span>
+    <span class="m">人群：进阶向</span>
+  </div>
+
+  <section>
+    <h2>小白版 · 3 分钟上手</h2>
+    <h3>一句话它是啥</h3>
+    <p>一个“把语音变文字、还能直接出字幕”的本地工具——跑在 Apple Silicon Mac 上，<b>不用 API key、不上传文件</b>，隐私友好。视频创作里拿来生成 SRT 字幕最顺手。</p>
+    <h3>它能帮你干啥</h3>
+    <ul>
+      <li>把视频/音频里的说话内容转写成文字；</li>
+      <li><b>直接生成 SRT 字幕</b>，丢进剪映/Premiere 就能烧字幕；</li>
+      <li>外语音频一键翻译（--task translate）；</li>
+      <li>会议录音 → 文字稿 → 纪要，一条龙。</li>
+    </ul>
+    <h3>3 步上手（Mac M 芯片）</h3>
+    <ol>
+      <li>装好 <code>mlx_whisper</code>（pip 装）；</li>
+      <li>一句“用 mlx-whisper 把这个视频转出字幕”；</li>
+      <li>拿到 <code>subs.srt</code>，直接进剪辑软件。</li>
+    </ol>
+    <h3>常见坑</h3>
+    <ul>
+      <li>只支持 Apple Silicon Mac（M1/M2/M3/M4），Intel 不行；</li>
+      <li>首次用会下载模型（tiny 约 75MB，turbo 约 1.6GB），耐心等；</li>
+      <li>默认 tiny 模型最快但一般，要质量加 <code>--model whisper-large-v3-turbo</code>。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>进阶版 · 玩出花</h2>
+    <h3>模型怎么选</h3>
+    <table>
+      <tr><th>模型</th><th>大小</th><th>速度</th><th>质量</th></tr>
+      <tr><td>whisper-tiny</td><td>~75MB</td><td>最快</td><td>基础</td></tr>
+      <tr><td>whisper-base</td><td>~140MB</td><td>快</td><td>好</td></tr>
+      <tr><td>whisper-small</td><td>~470MB</td><td>中</td><td>更好</td></tr>
+      <tr><td>whisper-large-v3-turbo</td><td>~1.6GB</td><td>快</td><td>极佳（推荐）</td></tr>
+      <tr><td>whisper-large-v3</td><td>~3GB</td><td>最慢</td><td>最佳</td></tr>
+    </table>
+    <h3>常用命令</h3>
+    <p><code>mlx_whisper video.mp4 -f srt -o ./subs</code>（出字幕）<br>
+       <code>mlx_whisper audio.m4a -f txt -o ./output</code>（出文本）<br>
+       <code>mlx_whisper foreign.mp3 --task translate</code>（翻译）</p>
+    <h3>与其他工具组合</h3>
+    <ul>
+      <li>配「ElevenLabs」：原片转字幕 → 重新 AI 配音 → 换语种视频；</li>
+      <li>配「去 AI 味 / 长文写作」：语音纪要 → 润色成文；</li>
+      <li>配「YouTube 字幕捕手」：本地精转 + 线上抓取双保险。</li>
+    </ul>
+    <h3>边界与注意</h3>
+    <p>仅限 Apple Silicon Mac；模型首次下载走 HuggingFace 缓存到 <code>~/.cache/huggingface/</code>；长音频建议用 turbo 模型平衡速度与质量。</p>
+  </section>
+
+  <section class="hook">
+    <h2>多平台衍生钩子</h2>
+    <ul>
+      <li><b>长文标题：</b>《不用 API Key 也能出字幕：Mac 本地语音转写实战》</li>
+      <li><b>PPT 大纲（5 页）：</b>封面 → 为什么需要本地转写 → 3 行命令出字幕 → 模型怎么选 → 行动号召</li>
+      <li><b>短视频钩子（15s）：</b>「视频没字幕？Mac 本地一键生成 SRT，不上传还免费。」</li>
+    </ul>
+  </section>
+
+  <section class="src">
+    <p>来源：clawhub.ai 第三方技能（作者 kevin37li，MIT-0，4334 次下载）。本页依据其公开 SKILL.md 整理，命令以原项目（ml-explore/mlx-examples）为准。本机安装：<code>clawhub install mlx-whisper</code>。</p>
+  </section>
+
+  <footer>WorkBuddy AI 工具实战 · 边学边分享 · 每掌握一个工具更新一篇</footer>
+</div>
+</body>
+</html>
