@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Illo 编辑插画 · 工具详情 | WorkBuddy AI 工具实战</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1f2937;--sub:#6b7280;--line:#e5e7eb;--accent:#ec4899;--ok:#16a34a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 24px 70px}
+  .back{display:inline-block;color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;margin-bottom:18px}
+  .tag{display:inline-block;padding:4px 12px;border-radius:999px;background:#fce7f3;color:var(--accent);font-size:13px;font-weight:600;margin-bottom:12px}
+  h1{font-size:30px;font-weight:800}
+  .en{font-family:ui-monospace,Menlo,monospace;color:var(--sub);font-size:13px;margin-top:6px}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+  .m{font-size:12px;font-weight:600;padding:4px 11px;border-radius:8px;background:#fce7f3;color:#be185d}
+  .m.ok{background:#dcfce7;color:#15803d}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px}
+  section h2{font-size:20px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--accent)}
+  h3{font-size:16px;margin:18px 0 8px;color:#111827}
+  p,li{color:#374151;font-size:15px}
+  ul,ol{padding-left:22px;margin:6px 0}
+  li{margin:5px 0}
+  code{background:#f3f4f6;padding:2px 7px;border-radius:6px;font-size:13px;font-family:ui-monospace,Menlo,monospace}
+  .hook{background:#fffbeb;border-color:#fde68a}
+  .hook h2{border-color:#f59e0b}
+  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; 返回 AI 工具导航</a>
+  <div class="tag">设计创作 · 编辑插画</div>
+  <h1>Illo · 有性格的编辑插画</h1>
+  <div class="en">illo</div>
+  <div class="meta">
+    <span class="m">分类：设计创作</span>
+    <span class="m ok">需图像后端</span>
+    <span class="m">人群：进阶向</span>
+  </div>
+
+  <section>
+    <h2>小白版 · 3 分钟上手</h2>
+    <h3>一句话它是啥</h3>
+    <p>写文章想配张图，但嫌通用生图器「没灵魂」？Illo 是专做<strong>编辑插画</strong>的——一个反复出现的吉祥物角色，在每个画面里把你的想法「演」出来，是有角色、有风格的系列插画，不是随便一张图。</p>
+    <h3>它能帮你干啥</h3>
+    <ul>
+      <li>给文章 / 帖子 / 通讯 / 链接<strong>配一张讲清概念的图</strong>（关键判断、流程、前后对比、陷阱、循环）；</li>
+      <li><strong>迷你漫画</strong>：2–4 格同框，讲一个分阶段的推进；</li>
+      <li><strong>解说图</strong>：把可追踪的结构（流水线、时间线、循环）画成手绘风示意图；</li>
+      <li><strong>角色抠图</strong>：透明背景的吉祥物 PNG，方便你后续叠加；</li>
+      <li>还能<strong>造你自己的吉祥物</strong>、装社区角色、换风格。</li>
+    </ul>
+    <h3>3 步上手</h3>
+    <ol>
+      <li>对它说：「给『你是瓶颈』这篇文章配张图」；</li>
+      <li>它选好角色（默认 Blot 水墨滴）和风格，出图；</li>
+      <li>拿到 PNG，直接拖进文章 / 推文 / 幻灯片。</li>
+    </ol>
+    <h3>常见坑</h3>
+    <ul>
+      <li>它不是通用生图器，只在该技能被点名时用，不搞「画个猫」那种随意图；</li>
+      <li>出图需要本机有 python3 + 网络，并配好一个图像后端（下面进阶版讲）；</li>
+      <li>风格是「配置化」的——角色包带着风格走，换角色才换风。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>进阶版 · 玩出花</h2>
+    <h3>三种图像后端（按需选）</h3>
+    <ul>
+      <li><strong>Codex 后端</strong>（Codex 订阅用户免费）：用你自己的 Codex CLI 额度，无 Key、无 Token；</li>
+      <li><strong>Grok 后端</strong>（Grok 订阅用户免费）：用你的 Grok 额度，但 JPEG 无透明通道，<strong>做不了抠图</strong>；</li>
+      <li><strong>OpenRouter 后端</strong>（付费，直连或兜底）：需要 OpenRouter API Key，可指定模型。</li>
+    </ul>
+    <h3>16 种内置风格</h3>
+    <p>riso（默认，颗粒网点的油墨感）、blueprint、woodcut、pixel、clay、manila、chalk、phosphor、enamel、gouache、felt、diorama、sketchbook、bricks（乐高摄影风）、fizz、bloom。风格跟着角色包走——换角色包就换风格。</p>
+    <h3>典型用法</h3>
+    <p>每个命令都要在同一行内先 <code>SKILL_DIR="<本技能目录>"</code> 再调 <code>illo.py</code>（shell 状态不跨块保留）：</p>
+    <p><code>python3 "$SKILL_DIR/scripts/illo.py" doctor</code> # 自检<br>
+    <code>python3 "$SKILL_DIR/scripts/illo.py" generate --prompt-file /tmp/shot.txt --ref "$SKILL_DIR/assets/character-reference.webp" --aspect 16:9 --out "assets/&lt;slug&gt;/01.png"</code></p>
+    <h3>配「视频创作」一起用</h3>
+    <ul>
+      <li>配 <code>media-use</code>：插画定稿后，用 media-use 把 BGM/音效补齐，做成带配图的短视频；</li>
+      <li>配「PPT 演示文稿」：把系列插画直接拖进幻灯片，汇报更有记忆点；</li>
+      <li>配「去 AI 味」：配图文章的文案先去味，图文一致不机械。</li>
+    </ul>
+    <h3>边界与注意</h3>
+    <p>引擎只壳调你自己的订阅 CLI 或 OpenRouter Key，绝不读环境变量里的密钥、也不接命令行参数传密钥——Key 永远是你自己 <code>init</code> 写入的。每个画面只讲一个隐喻，绝不抄示例构图。Chat 会话里成品以原文件附件交付，避免平台压缩毁掉 riso 颗粒感。</p>
+  </section>
+
+  <section class="hook">
+    <h2>多平台衍生钩子</h2>
+    <ul>
+      <li><b>长文标题：</b>《别再用没灵魂的配图：一个让吉祥物替你讲概念的插画 Agent》</li>
+      <li><b>PPT 大纲（5 页）：</b>封面 → 通用生图器的问题 → Illo 的「角色+风格」方法论 → 3 种后端怎么选 → 行动号召</li>
+      <li><b>短视频钩子（15s）：</b>「文章配图总像凑数？这个 Agent 让吉祥物替你把概念演出来。」</li>
+    </ul>
+  </section>
+
+  <footer>WorkBuddy AI 工具实战 · 边学边分享 · 每掌握一个工具更新一篇</footer>
+</div>
+</body>
+</html>

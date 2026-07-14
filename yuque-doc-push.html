@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>语雀文档同步 Yuque · 工具详情 | WorkBuddy AI 工具实战</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1f2937;--sub:#6b7280;--line:#e5e7eb;--accent:#0891b2;--ok:#16a34a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 24px 70px}
+  .back{display:inline-block;color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;margin-bottom:18px}
+  .tag{display:inline-block;padding:4px 12px;border-radius:999px;background:#e0f2fe;color:var(--accent);font-size:13px;font-weight:600;margin-bottom:12px}
+  h1{font-size:30px;font-weight:800}
+  .en{font-family:ui-monospace,Menlo,monospace;color:var(--sub);font-size:13px;margin-top:6px}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+  .m{font-size:12px;font-weight:600;padding:4px 11px;border-radius:8px;background:#e0f2fe;color:#0e7490}
+  .m.ok{background:#dcfce7;color:#15803d}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px}
+  section h2{font-size:20px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--accent)}
+  h3{font-size:16px;margin:18px 0 8px;color:#111827}
+  p,li{color:#374151;font-size:15px}
+  ul,ol{padding-left:22px;margin:6px 0}
+  li{margin:5px 0}
+  code{background:#f3f4f6;padding:2px 7px;border-radius:6px;font-size:13px;font-family:ui-monospace,Menlo,monospace}
+  .hook{background:#fffbeb;border-color:#fde68a}
+  .hook h2{border-color:#f59e0b}
+  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; 返回 AI 工具导航</a>
+  <div class="tag">办公协作 · 小白向</div>
+  <h1>语雀文档同步 · Yuque Doc Push</h1>
+  <div class="en">yuque-doc-push</div>
+  <div class="meta">
+    <span class="m">分类：办公协作</span>
+    <span class="m ok">需语雀 Token</span>
+    <span class="m">人群：小白向</span>
+  </div>
+
+  <section>
+    <h2>小白版 · 3 分钟上手</h2>
+    <h3>一句话它是啥</h3>
+    <p>你写好的 Markdown 文档，想一键同步到语雀知识库？这个技能让 AI 帮你「把本地文章推到语雀、拉回来、查目录、改内容」——不用在网页里手动复制粘贴。</p>
+    <h3>它能帮你干啥</h3>
+    <ul>
+      <li>在语雀知识库里<strong>新建 / 更新 / 删除 / 读取</strong>文档；</li>
+      <li>新建后<strong>自动挂到目录</strong>（TOC），不用手动排；</li>
+      <li><strong>双向同步</strong>：本地 Markdown ↔ 语雀，只推真正改动的部分；</li>
+      <li>查看知识库的目录结构，心里有数。</li>
+    </ul>
+    <h3>3 步上手</h3>
+    <ol>
+      <li>准备语雀<strong>知识库 URL</strong>和<strong>API Token</strong>（语雀→头像→账号设置→Token→新建，给目标库读写权限）；</li>
+      <li>对它说「把这篇推到语雀」，它跑一次 setup 自动连上；</li>
+      <li>之后「同步一下」就搞定，它自己比对哪些变了。</li>
+    </ol>
+    <h3>常见坑</h3>
+    <ul>
+      <li>它不是 WorkBuddy 内置能力，需要一个语雀 Token（你自己申请）；</li>
+      <li>Token 很私密——它绝不会在聊天里回显，只悄悄喂给本地脚本；</li>
+      <li>同步只动「已发布版本」，队友在网页里没发布的草稿不会被覆盖。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>进阶版 · 玩出花</h2>
+    <h3>核心：CRUD + 同步引擎</h3>
+    <p>底层走语雀 OpenAPI，本技能只管「单个知识库内」的文档增删改查 + 目录管理，以及本地 Markdown 的双向同步。它<strong>不碰</strong>知识库/团队的创建删除、成员管理、跨库迁移——边界很清楚。</p>
+    <h3>命令速查</h3>
+    <table style="width:100%;border-collapse:collapse;font-size:14px;margin:8px 0">
+      <tr style="background:#f8fafc"><td style="padding:6px 10px;border:1px solid #e5e7eb;font-weight:600">创建</td><td style="padding:6px 10px;border:1px solid #e5e7eb"><code>python scripts/yuque_cli.py create -t "标题" -b "正文"</code></td></tr>
+      <tr><td style="padding:6px 10px;border:1px solid #e5e7eb;font-weight:600">更新</td><td style="padding:6px 10px;border:1px solid #e5e7eb"><code>update &lt;id_or_slug&gt; -t "新标题"</code></td></tr>
+      <tr style="background:#f8fafc"><td style="padding:6px 10px;border:1px solid #e5e7eb;font-weight:600">删除</td><td style="padding:6px 10px;border:1px solid #e5e7eb"><code>delete &lt;id_or_slug&gt; --confirm</code>（必须带 --confirm）</td></tr>
+      <tr><td style="padding:6px 10px;border:1px solid #e5e7eb;font-weight:600">同步</td><td style="padding:6px 10px;border:1px solid #e5e7eb"><code>sync</code>（只推改动）</td></tr>
+      <tr style="background:#f8fafc"><td style="padding:6px 10px;border:1px solid #e5e7eb;font-weight:600">拉取</td><td style="padding:6px 10px;border:1px solid #e5e7eb"><code>pull --slug &lt;slug&gt;</code></td></tr>
+    </table>
+    <h3>同步的聪明之处</h3>
+    <p><code>sync</code> 用 <code>.yuque-sync.json</code> 记录每个文档的本地内容哈希和远端版本号，没变的文档直接跳过，不浪费 API 调用。支持三种本地布局：<code>flat</code>（顶层 .md）、<code>nested</code>（子目录）、<code>frontmatter</code>（文件头带 slug）。推送时还会自动：剥掉 frontmatter、把本地 <code>[文本](file.md)</code> 链接改写成语雀 slug 链接、修好加粗标点。</p>
+    <h3>配「腾讯乐享知识库」一起用</h3>
+    <ul>
+      <li>语雀管对外文档 / 协作，乐享管内部问答知识库，两套互补；</li>
+      <li>配「去 AI 味」：推到语雀前先把稿子去过味，读起来像人写的；</li>
+      <li>配「文档转 Markdown」：别的格式先转 MD，再统一推语雀。</li>
+    </ul>
+    <h3>边界与注意</h3>
+    <p>首次 setup 必须用户给 URL + Token；401 是 Token 失效要去重开；429 限流会短暂等待重试；<strong>绝不自动删远端文档</strong>——本地文件没了会停下来问你「删 / 拉回 / 忘掉」三选一。Token 永不进 git。</p>
+  </section>
+
+  <section class="hook">
+    <h2>多平台衍生钩子</h2>
+    <ul>
+      <li><b>长文标题：</b>《本地写完一键上语雀：一个 Agent 帮你管好知识库文档》</li>
+      <li><b>PPT 大纲（5 页）：</b>封面 → 为什么要把 Markdown 推语雀 → 4 个核心能力 → 安全与边界 → 行动号召</li>
+      <li><b>短视频钩子（15s）：</b>「Markdown 写完还要手动贴语雀？让 AI 帮你推、帮你同步。」</li>
+    </ul>
+  </section>
+
+  <footer>WorkBuddy AI 工具实战 · 边学边分享 · 每掌握一个工具更新一篇</footer>
+</div>
+</body>
+</html>

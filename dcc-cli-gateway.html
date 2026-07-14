@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCC 创作中枢 · 工具详情 | WorkBuddy AI 工具实战</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1f2937;--sub:#6b7280;--line:#e5e7eb;--accent:#ec4899;--ok:#16a34a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 24px 70px}
+  .back{display:inline-block;color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;margin-bottom:18px}
+  .tag{display:inline-block;padding:4px 12px;border-radius:999px;background:#fce7f3;color:var(--accent);font-size:13px;font-weight:600;margin-bottom:12px}
+  h1{font-size:30px;font-weight:800}
+  .en{font-family:ui-monospace,Menlo,monospace;color:var(--sub);font-size:13px;margin-top:6px}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+  .m{font-size:12px;font-weight:600;padding:4px 11px;border-radius:8px;background:#fce7f3;color:#be185d}
+  .m.ok{background:#dcfce7;color:#15803d}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px}
+  section h2{font-size:20px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--accent)}
+  h3{font-size:16px;margin:18px 0 8px;color:#111827}
+  p,li{color:#374151;font-size:15px}
+  ul,ol{padding-left:22px;margin:6px 0}
+  li{margin:5px 0}
+  code{background:#f3f4f6;padding:2px 7px;border-radius:6px;font-size:13px;font-family:ui-monospace,Menlo,monospace}
+  .hook{background:#fffbeb;border-color:#fde68a}
+  .hook h2{border-color:#f59e0b}
+  .note{background:#fef2f2;border:1px solid #fecaca;color:#991b1b;font-size:13px;padding:10px 14px;border-radius:10px;margin:6px 0 14px}
+  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; 返回 AI 工具导航</a>
+  <div class="tag">设计创作 · 视频/3D 中枢</div>
+  <h1>DCC 创作中枢 · CLI Gateway</h1>
+  <div class="en">dcc-cli-gateway</div>
+  <div class="meta">
+    <span class="m">分类：设计创作</span>
+    <span class="m ok">需 DCC 软件+DCC-MCP</span>
+    <span class="m">人群：进阶向</span>
+  </div>
+
+  <div class="note">来源说明：本技能详情页（SKILL.md 全文）本次会话未能从 clawhub.ai 拉取成功（注册表索引有该条目，但详情接口返回「未找到」）。本页依据 clawhub.ai 注册表公开元信息整理，非逐字原文——作为「生态导航」型展示，帮你定位这一类专业创作自动化工具。</div>
+
+  <section>
+    <h2>小白版 · 3 分钟上手</h2>
+    <h3>一句话它是啥</h3>
+    <p>你电脑上跑着 Nuke、Blender、Unreal 这些专业创作软件。DCC CLI Gateway 就是个<strong>「让 AI 远程操控这些软件」的中枢</strong>——把「在软件里点一下」变成「Agent 发一条指令」，创作流程能串进自动化。</p>
+    <h3>它能帮你干啥</h3>
+    <ul>
+      <li>作为<strong>统一入口</strong>，让 AI / 无头 CLI 宿主直接控制<strong>正在运行的 DCC 软件</strong>；</li>
+      <li>覆盖 Nuke、Blender、3ds Max、Unreal、ZBrush、Houdini 等专业软件；</li>
+      <li>把软件操作变成可编排的指令，接进 CI / 流水线自动跑。</li>
+    </ul>
+    <h3>3 步上手（概念）</h3>
+    <ol>
+      <li>本机装好某款 DCC 软件，并接入 DCC-MCP 协议；</li>
+      <li>让 Agent 通过本网关发指令驱动软件；</li>
+      <li>把「渲染 / 批处理 / 资产操作」编进自动化流程。</li>
+    </ol>
+    <h3>常见坑</h3>
+    <ul>
+      <li>它不是 WorkBuddy 内置能力，是 DCC-MCP 生态的「运行中枢」；</li>
+      <li>真正用起来需要本机装有对应 DCC 软件并接入协议；</li>
+      <li>它是基础设施层，更多是「让别的技能/脚本能控软件」，不是直接出图。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>进阶版 · 玩出花</h2>
+    <h3>它在生态里的位置</h3>
+    <p>DCC-MCP 是一套「让 Agent 控制专业创作软件」的协议。这套生态里有三个配套技能，各管一段：</p>
+    <ul>
+      <li><strong>dcc-cli-gateway（本技能）</strong>——运行中枢，Agent 借它发指令控制实时软件；</li>
+      <li><strong>dcc-mcp-creator</strong>——教开发者和 Agent 为某款 DCC 软件<strong>新建 / 现代化一个适配器</strong>（adapter）；</li>
+      <li><strong>dcc-mcp-skills-creator</strong>——为 dcc-mcp-core 生态<strong>创建 / 校验 / 脚手架 / 评审 DCC-MCP 技能</strong>（写 SKILL.md、tools.yaml、scripts）。</li>
+    </ul>
+    <h3>适用场景</h3>
+    <ul>
+      <li><strong>视频 / 3D / VFX 自动化生产</strong>：批量渲染、批处理资产；</li>
+      <li><strong>CI 里跑创作任务</strong>：提交即触发渲染/导出；</li>
+      <li><strong>Agent 直接操作专业软件</strong>完成创意任务，少点鼠标。</li>
+    </ul>
+    <h3>配「视频创作」一起用</h3>
+    <ul>
+      <li>配 <code>media-use</code>：软件里产出的素材，交给 media-use 补齐 BGM/音效/调色；</li>
+      <li>配 <code>Motu 人像调色</code>：DCC 出的人像，再走 Motu 精修；</li>
+      <li>配 <code>Illo</code>：概念插画先定调，DCC 里做三维落地。</li>
+    </ul>
+    <h3>边界与注意</h3>
+    <p>它是「控制中枢」而非「生图器」，价值在于把专业软件接进 Agent 工作流。需要本机有对应软件 + DCC-MCP 接入才能跑；具体命令与适配器细节需以官方仓库/文档为准（本次未能拉取全文）。</p>
+  </section>
+
+  <section class="hook">
+    <h2>多平台衍生钩子</h2>
+    <ul>
+      <li><b>长文标题：</b>《让 AI 遥控 Nuke/Blender：DCC-MCP 把专业创作软件接进 Agent 工作流》</li>
+      <li><b>PPT 大纲（5 页）：</b>封面 → 专业软件自动化的痛点 → 网关/适配器/技能三件套 → 适用场景 → 行动号召</li>
+      <li><b>短视频钩子（15s）：</b>「Blender 渲染还要手动点？让 Agent 通过 DCC 网关帮你自动化。」</li>
+    </ul>
+  </section>
+
+  <footer>WorkBuddy AI 工具实战 · 边学边分享 · 每掌握一个工具更新一篇</footer>
+</div>
+</body>
+</html>

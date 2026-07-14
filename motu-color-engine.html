@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motu 人像调色引擎 · 工具详情 | WorkBuddy AI 工具实战</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1f2937;--sub:#6b7280;--line:#e5e7eb;--accent:#ec4899;--ok:#16a34a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 24px 70px}
+  .back{display:inline-block;color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;margin-bottom:18px}
+  .tag{display:inline-block;padding:4px 12px;border-radius:999px;background:#fce7f3;color:var(--accent);font-size:13px;font-weight:600;margin-bottom:12px}
+  h1{font-size:30px;font-weight:800}
+  .en{font-family:ui-monospace,Menlo,monospace;color:var(--sub);font-size:13px;margin-top:6px}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+  .m{font-size:12px;font-weight:600;padding:4px 11px;border-radius:8px;background:#fce7f3;color:#be185d}
+  .m.ok{background:#dcfce7;color:#15803d}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px}
+  section h2{font-size:20px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--accent)}
+  h3{font-size:16px;margin:18px 0 8px;color:#111827}
+  p,li{color:#374151;font-size:15px}
+  ul,ol{padding-left:22px;margin:6px 0}
+  li{margin:5px 0}
+  code{background:#f3f4f6;padding:2px 7px;border-radius:6px;font-size:13px;font-family:ui-monospace,Menlo,monospace}
+  .hook{background:#fffbeb;border-color:#fde68a}
+  .hook h2{border-color:#f59e0b}
+  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; 返回 AI 工具导航</a>
+  <div class="tag">设计创作 · 视频后期</div>
+  <h1>Motu 人像调色引擎</h1>
+  <div class="en">motu-color-engine</div>
+  <div class="meta">
+    <span class="m">分类：设计创作</span>
+    <span class="m ok">需 MotuArt API</span>
+    <span class="m">人群：进阶向</span>
+  </div>
+
+  <section>
+    <h2>小白版 · 3 分钟上手</h2>
+    <h3>一句话它是啥</h3>
+    <p>做视频/做号常要处理人像：调个色、磨个皮、换个证件照底色、批量出头像。Motu 就是个「AI 人像精修」引擎——丢一张照片进去，按你要的来。</p>
+    <h3>它能帮你干啥</h3>
+    <ul>
+      <li><strong>人像调色</strong> / 肤色校正（电影感、商业感 look）；</li>
+      <li><strong>保身份磨皮</strong>：只柔化毛孔瑕疵，脸型不变、不搞蛇精脸；</li>
+      <li>导出皮肤 / 人脸 / 人物<strong>蒙版</strong>（抠图层）；</li>
+      <li><strong>证件照 / 护照照 / 签证照 / 头像</strong>：裁到规格、换底色、合规检查、冲印排版；</li>
+      <li><strong>合规换装</strong>：只换服务端审核过的服装，不乱来。</li>
+    </ul>
+    <h3>3 步上手</h3>
+    <ol>
+      <li>准备好要处理的照片；</li>
+      <li>对它说：「把这张调成电影感 + 磨下皮」或「出一套一寸证件照」；</li>
+      <li>它调 MotuArt 云端 API，吐回处理好的图。</li>
+    </ol>
+    <h3>常见坑</h3>
+    <ul>
+      <li>它不是 WorkBuddy 内置能力，走 MotuArt 云端 API（需要网络，认证开启时要 Key）；</li>
+      <li>单张图上限约 15MB，支持 JPG/PNG/WebP；</li>
+      <li>换装只能用「审核过的服装目录」，不能自己编 prompt 乱换。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>进阶版 · 玩出花</h2>
+    <h3>工作流：按活儿选脚本</h3>
+    <p>底层是 MotuArt 托管的 HTTP API，自带一堆脚本，优先用脚本别手敲 curl。核心能力：</p>
+    <ul>
+      <li><code>grade.sh</code> — 调色 / 肤色校正，可顺带裁剪；</li>
+      <li><code>smooth.sh</code> — 只磨皮，不动颜色白平衡；</li>
+      <li><code>mask.sh</code> — 导出蒙版（skin / valid_skin / face / person）；</li>
+      <li><code>crop.sh</code> — 只裁剪证件照/头像，可换底；</li>
+      <li><code>outfit.sh</code> + <code>outfits.sh</code> — 先查审核服装目录，再换装；</li>
+      <li><code>id-pack.sh</code> — 证件照整套：一张精修母版 → 多规格裁剪 + 上传优化 + 合规报告 + 冲印排版；</li>
+      <li><code>id-check.sh</code> / <code>optimize.sh</code> / <code>print-sheet.sh</code> — 合规检查 / 上传体积优化 / 冲印排版。</li>
+    </ul>
+    <h3>证件照一条龙</h3>
+    <p><code>id-pack.sh</code> 会先出一张「调色+磨皮母版」，再从母版裁多个规格（护照、一寸、美签…），颜色和精修保持一致。支持学校/入学规格（上海义务教育、大学毕业图像、全国中小学生学籍等）。默认背景走各规格标准色板（白/蓝/红等）。</p>
+    <h3>配「视频创作」一起用</h3>
+    <ul>
+      <li>配 <code>media-use</code>：先用它把 BGM/图标备齐，人像精修交给 Motu，视频素材一条龙；</li>
+      <li>配「PPT 演示文稿」：证件照/头像精修后直接拖进幻灯片；</li>
+      <li>配「去 AI 味」：人像说明文案先去味，发布不尴尬。</li>
+    </ul>
+    <h3>边界与注意</h3>
+    <p>引擎<strong>保身份</strong>——不做瘦脸、不变脸型、不换脸；磨皮只柔化皮肤区内毛孔。换背景仅限声明了 <code>bg_colors</code> 的规格。脚本失败先看 HTTP 状态码和错误详情，再决定重试/改参/问用户。处理是同步的，批量就是逐张调用。</p>
+  </section>
+
+  <section class="hook">
+    <h2>多平台衍生钩子</h2>
+    <ul>
+      <li><b>长文标题：</b>《一张照片自动出证件照+换底色：AI 人像精修引擎实操》</li>
+      <li><b>PPT 大纲（5 页）：</b>封面 → 人像后期痛点在哪 → 6 类能力 → 证件照一条龙 → 行动号召</li>
+      <li><b>短视频钩子（15s）：</b>「一张自拍自动出一寸照+换蓝底？这个 AI 精修引擎帮你搞定。」</li>
+    </ul>
+  </section>
+
+  <footer>WorkBuddy AI 工具实战 · 边学边分享 · 每掌握一个工具更新一篇</footer>
+</div>
+</body>
+</html>

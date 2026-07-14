@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WorkBuddy AI 工具实战 · 44 件神器导航</title>
+<title>WorkBuddy AI 工具实战 · 48 件神器导航</title>
 <style>
   :root{
     --bg:#f6f7f9; --card:#ffffff; --ink:#1f2937; --sub:#6b7280;
@@ -70,9 +70,9 @@
 </head>
 <body>
   <div class="hero">
-    <h1>WorkBuddy AI 工具实战 · 44 件神器导航</h1>
+    <h1>WorkBuddy AI 工具实战 · 48 件神器导航</h1>
     <span class="tag">边学边分享 · 小白版 + 进阶版 · 持续更新</span>
-    <p>这里收录了 WorkBuddy 里全部 44 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯五大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
+    <p>这里收录了 WorkBuddy 里全部 48 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯五大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
   </div>
 
   <div class="search">
@@ -80,11 +80,11 @@
   </div>
 
   <div class="tabs" id="tabs">
-    <div class="tab active" data-cat="all">全部 44</div>
-    <div class="tab" data-cat="A">办公协作 8</div>
+    <div class="tab active" data-cat="all">全部 48</div>
+    <div class="tab" data-cat="A">办公协作 9</div>
     <div class="tab" data-cat="B">开发提效 6</div>
     <div class="tab" data-cat="C">金融投资 7</div>
-    <div class="tab" data-cat="D">设计创作 14</div>
+    <div class="tab" data-cat="D">设计创作 17</div>
     <div class="tab" data-cat="E">资讯内容 5</div>
     <div class="tab" data-cat="M">元工具 4</div>
   </div>
@@ -143,6 +143,7 @@ const TOOLS = [
   {name:"本地 Office 编辑",en:"tencent-local-office-edit",cat:"A",desc:"本机 Word/Excel/PPT 实时读写，所见即所得。",level:"小白",status:"即装即用"},
   {name:"Clawdbot 文档专家",en:"clawddocs",cat:"A",desc:"Clawdbot 文档导航员：决策树定位文档、搜文档、抓具体页、版本追踪（clawhub.ai 第三方技能）。",level:"小白",status:"即装即用",detail:"clawddocs.html"},
   {name:"Gog Google 办公命令行",en:"gog",cat:"A",desc:"把 Gmail/日历/网盘/通讯录/表格/文档全搬进命令行，一句话让 AI 帮你发邮件查日程。",level:"进阶",status:"即装即用",detail:"gog.html"},
+  {name:"语雀文档同步",en:"yuque-doc-push",cat:"A",desc:"把本地 Markdown 推到语雀知识库：文档增删改查+目录管理+双向同步，只推改动部分（clawhub.ai 第三方技能，需语雀 Token）。",level:"小白",status:"需语雀 Token",connect:"语雀",detail:"yuque-doc-push.html"},
   // B 开发提效
   {name:"GitHub 管理",en:"github",cat:"B",desc:"管 Issues、PR、CI 流水线，开发协作一把抓。",level:"进阶",status:"需连账号",connect:"GitHub"},
   {name:"GitHub 热门项目",en:"github-trending-cn",cat:"B",desc:"今日 / 本周最火仓库一目了然，找灵感学趋势。",level:"小白",status:"即装即用"},
@@ -173,6 +174,9 @@ const TOOLS = [
   {name:"UI/UX Pro Max",en:"ui-ux-pro-max",cat:"D",desc:"UI/UX 设计智能体：信息架构+交互流程+可用性，从结构到皮一把抓。",level:"进阶",status:"即装即用",detail:"ui-ux-pro-max.html"},
   {name:"media-use 媒体操作系统",en:"media-use",cat:"D",desc:"给视频项目当媒体采购部：BGM/音效/图片/图标/品牌logo/配音/调色块一条龙 resolve（clawhub.ai 第三方技能，需 HeyGen CLI）。",level:"进阶",status:"需 HeyGen CLI",connect:"HeyGen",detail:"media-use.html"},
   {name:"HyperFrames 视频创意导演",en:"hyperframes-creative",cat:"D",desc:"视频的创意方向层：配色/字体/旁白/分镜节奏/构图套路，定好方向再交给技术层（clawhub.ai 第三方技能，需 hyperframes CLI）。",level:"进阶",status:"需 hyperframes CLI",connect:"HyperFrames",detail:"hyperframes-creative.html"},
+  {name:"Motu 人像调色引擎",en:"motu-color-engine",cat:"D",desc:"AI 人像精修：调色/保身份磨皮/换装/证件照裁剪换底/合规检查，走 MotuArt 云端 API（clawhub.ai 第三方技能，需 API）。",level:"进阶",status:"需 MotuArt API",connect:"MotuArt",detail:"motu-color-engine.html"},
+  {name:"Illo 编辑插画",en:"illo",cat:"D",desc:"有性格的编辑插画：吉祥物角色把概念演出来，迷你漫画/解说图/角色抠图，16 种风格（clawhub.ai 第三方技能，需图像后端）。",level:"进阶",status:"需图像后端",connect:"Codex/Grok/OpenRouter",detail:"illo.html"},
+  {name:"DCC 创作中枢",en:"dcc-cli-gateway",cat:"D",desc:"让 AI 远程操控 Nuke/Blender/Unreal 等专业软件的 DCC-MCP 运行中枢，串进视频/3D 自动化（clawhub.ai 第三方技能，需 DCC 软件+协议）。",level:"进阶",status:"需 DCC 软件",connect:"DCC-MCP",detail:"dcc-cli-gateway.html"},
   // E 资讯内容
   {name:"腾讯新闻",en:"tencent-news",cat:"E",desc:"7×24 热榜、早晚报、实时资讯，天下事一袋装。",level:"小白",status:"即装即用",detail:"tencent-news.html"},
   {name:"SkillHub 每日推荐",en:"skillhub-daily",cat:"E",desc:"每天扫 Top100 好 Skill 精准推给你，发现神器。",level:"小白",status:"即装即用"},
