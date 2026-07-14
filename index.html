@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WorkBuddy AI 工具实战 · 56 件神器导航</title>
+<title>WorkBuddy AI 工具实战 · 63 件神器导航</title>
 <style>
   :root{
     --bg:#f6f7f9; --card:#ffffff; --ink:#1f2937; --sub:#6b7280;
@@ -70,9 +70,9 @@
 </head>
 <body>
   <div class="hero">
-    <h1>WorkBuddy AI 工具实战 · 56 件神器导航</h1>
+    <h1>WorkBuddy AI 工具实战 · 63 件神器导航</h1>
     <span class="tag">边学边分享 · 小白版 + 进阶版 · 持续更新</span>
-    <p>这里收录了 WorkBuddy 里全部 56 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯五大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
+    <p>这里收录了 WorkBuddy 里全部 63 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯、偏门六大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
   </div>
 
   <div class="search">
@@ -80,12 +80,13 @@
   </div>
 
   <div class="tabs" id="tabs">
-    <div class="tab active" data-cat="all">全部 56</div>
+    <div class="tab active" data-cat="all">全部 63</div>
     <div class="tab" data-cat="A">办公协作 10</div>
     <div class="tab" data-cat="B">开发提效 8</div>
     <div class="tab" data-cat="C">金融投资 9</div>
     <div class="tab" data-cat="D">设计创作 19</div>
     <div class="tab" data-cat="E">资讯内容 6</div>
+    <div class="tab" data-cat="F">偏门神器 7</div>
     <div class="tab" data-cat="M">元工具 4</div>
   </div>
 
@@ -132,6 +133,7 @@ const CAT = {
   D:{name:"设计创作",c:"var(--cD)"},
   E:{name:"资讯内容",c:"var(--cE)"},
   M:{name:"元工具",c:"var(--cM)"}
+  ,F:{name:"偏门神器",c:"var(--cF)"}
 };
 const TOOLS = [
   // A 办公协作
@@ -191,6 +193,14 @@ const TOOLS = [
   {name:"云部署",en:"cloudstudio-deploy",cat:"E",desc:"本地静态站一键部署到云端，发链接就能看。",level:"进阶",status:"即装即用"},
   {name:"YouTube 字幕捕手",en:"youtube-watcher",cat:"E",desc:"抓 YouTube 字幕→总结/问答/摘重点，长视频一键变可读文字。",level:"小白",status:"需配 yt-dlp",connect:"yt-dlp",detail:"youtube-watcher.html"},
   {name:"公众号文章归档器",en:"wechat-article-archive",cat:"E",desc:"公众号文章/小绿书一键存成本地 Markdown+图片，图片下到本地不传云，适合收藏与二次创作（clawhub.ai 第三方技能，需 python+node）。",level:"小白",status:"即装即用",detail:"wechat-article-archive.html"},
+  // F 偏门神器
+  {name:"Legal 法律思维",en:"legal",cat:"F",desc:"像律师一样拆法律问题：管辖权→事实→争点→法条→适用→风险→行动，套 IRAC 框架给结构化分析（clawhub.ai 第三方技能）。",level:"通用",status:"即装即用",detail:"legal.html"},
+  {name:"Health 健康养生陪跑",en:"health",cat:"F",desc:"个人健康陪跑，严格守\"不诊断不处方\"边界，只给循证可落地建议，追踪睡眠/饮食/运动相关性（clawhub.ai 第三方技能）。",level:"通用",status:"即装即用",detail:"health.html"},
+  {name:"Game 游戏设计引擎",en:"game",cat:"F",desc:"一句话游戏设计引擎：描述点子回一套今晚能玩的完整规则，覆盖桌游/派对/儿童/电子游戏概念+现实游戏化（clawhub.ai 第三方技能，MIT-0）。",level:"通用",status:"即装即用",detail:"game.html"},
+  {name:"AgentGuard AI 安全守卫",en:"agentguard",cat:"F",desc:"AI Agent 安全守卫：扫技能藏恶意/查凭据泄露/拦危险命令/跑每日巡逻+5维健康打分报告，24条检测规则（clawhub.ai 第三方技能，MIT，需 Node18+）。",level:"进阶",status:"即装即用",detail:"agentguard.html"},
+  {name:"Music 个人音乐库",en:"music",cat:"F",desc:"私人音乐管理系统：收藏/演出/听歌记忆全记下，按场景歌单+主动提醒，纯本地 markdown（clawhub.ai 第三方技能）。",level:"通用",status:"即装即用",detail:"music.html"},
+  {name:"Learning 自适应学习",en:"learning",cat:"F",desc:"自适应学习陪跑：自动摸清你咋学最好，把教学风格/格式/深度调成你的偏好（clawhub.ai 第三方技能）。",level:"通用",status:"即装即用",detail:"learning.html"},
+  {name:"PDA 任务重构",en:"pda-reframing",cat:"F",desc:"PDA 自闭症辅助：把\"你必须做 X\"重构成探索/自主式语言，降低需求回避焦虑，真尊重自主权（GitHub 第三方技能，有社会价值）。",level:"通用",status:"即装即用",detail:"pda-reframing.html"},
   // M 元工具
   {name:"市场安装器",en:"marketplace-skill-installer",cat:"M",desc:"一句话从推荐市场装 Skill，扩展能力零门槛。",level:"小白",status:"即装即用"},
   {name:"ClawdHub 技能市场 CLI",en:"clawdhub",cat:"M",desc:"命令行技能商店：从 clawhub.com 搜 / 装 / 更新 / 发布 AI 技能（clawhub.ai 第三方技能）。",level:"小白",status:"即装即用",detail:"clawdhub.html"},
