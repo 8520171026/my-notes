@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Classroom 管理器 · 工具详情 | WorkBuddy AI 工具实战</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1f2937;--sub:#6b7280;--line:#e5e7eb;--accent:#ec4899;--ok:#16a34a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 24px 70px}
+  .back{display:inline-block;color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;margin-bottom:18px}
+  .tag{display:inline-block;padding:4px 12px;border-radius:999px;background:#fce7f3;color:var(--accent);font-size:13px;font-weight:600;margin-bottom:12px}
+  h1{font-size:30px;font-weight:800}
+  .en{font-family:ui-monospace,Menlo,monospace;color:var(--sub);font-size:13px;margin-top:6px}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+  .m{font-size:12px;font-weight:600;padding:4px 11px;border-radius:8px;background:#fce7f3;color:#be185d}
+  .m.ok{background:#dcfce7;color:#15803d}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px}
+  section h2{font-size:20px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--accent)}
+  h3{font-size:16px;margin:18px 0 8px;color:#111827}
+  p,li{color:#374151;font-size:15px}
+  ul,ol{padding-left:22px;margin:6px 0}
+  li{margin:5px 0}
+  .hook{background:#fffbeb;border-color:#fde68a}
+  .hook h2{border-color:#f59e0b}
+  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; 返回 AI 工具导航</a>
+  <div class="tag">偏门神器 · 教育学习</div>
+  <h1>Google Classroom 管理器</h1>
+  <div class="en">google-classroom-education</div>
+  <div class="meta">
+    <span class="m">分类：教育学习</span>
+    <span class="m ok">需OAuth配置</span>
+    <span class="m">来源：skillhub.cn</span>
+  </div>
+  <section>
+    <h2>小白版 · 3 分钟上手</h2>
+    
+    <h3>一句话它是啥</h3>
+    <p>通过 <strong>Google Classroom API</strong> 直接管课堂：列课程和花名册、查作业与提交、建/改作业、发公告、看成绩——老师/助教的管理外挂。</p>
+    <h3>它能帮你干啥</h3>
+    <ul>
+      <li>列出你名下课程、学生名单、教师名单；</li>
+      <li>查看作业布置与提交情况、批改进度；</li>
+      <li>确认后批量建作业、发公告；</li>
+      <li>汇总成绩与提交状态，少切网页。</li>
+    </ul>
+    <h3>3 步上手</h3>
+    <ol>
+      <li>用 Google 账号完成 OAuth 授权（走 ClawLink 托管连接）；</li>
+      <li>用自然语言说要干啥（「给三年级甲班发个周末作业」）；</li>
+      <li>它调 API 帮你执行，改动类操作先确认。</li>
+    </ol>
+    <h3>常见坑</h3>
+    <ul>
+      <li>需 Google Cloud OAuth 凭据 + ClawLink 托管，<b>配置门槛较高</b>；</li>
+      <li>建/改作业属于写操作，执行前看清范围；</li>
+      <li>学校账号可能限制 API 权限，先确认开通。</li>
+    </ul>
+  </section>
+  <section>
+    <h2>进阶版 · 玩出花</h2>
+    
+    <h3>进阶配置</h3>
+    <p>用 ClawLink 托管连接流做 OAuth，免去本地配凭据；可管理课程花名册、作业与提交、成绩、公告，支持批量建作业 / 发公告。</p>
+    <h3>与其他工具组合</h3>
+    <ul>
+      <li>配「学术文献 PPT」：作业要求 + 参考 slides 一键发；</li>
+      <li>配「日历/邮件」类：截止日自动提醒学生；</li>
+      <li>配「表格」类：成绩导出做分析。</li>
+    </ul>
+    <h3>自动化玩法</h3>
+    <p>固定「周日晚发下周作业 + 截止前提醒 + 收齐后汇总成绩」的流水线。</p>
+    <h3>边界与注意</h3>
+    <p>强依赖 Google 账号 OAuth 与 ClawLink 托管，普通用户配置成本高；写操作务必二次确认。</p>
+  </section>
+  <section class="hook">
+    <h2>多平台衍生钩子</h2>
+    <ul>
+
+      <li><b>长文标题：</b>《老师的解放：用 API 接管 Google Classroom》</li>
+      <li><b>PPT 大纲（5 页）：</b>封面 → 它能管啥 → OAuth 怎么配 → 批量玩法 → 行动号召</li>
+      <li><b>短视频钩子（15s）：</b>「布置作业发公告，一句话让 AI 搞定。」</li>
+    </ul>
+  </section>
+  <footer>WorkBuddy AI 工具实战 · 边学边分享 · 每掌握一个工具更新一篇</footer>
+</div>
+</body>
+</html>

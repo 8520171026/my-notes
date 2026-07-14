@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WorkBuddy AI 工具实战 · 86 件神器导航</title>
+<title>WorkBuddy AI 工具实战 · 92 件神器导航</title>
 <style>
   :root{
     --bg:#f6f7f9; --card:#ffffff; --ink:#1f2937; --sub:#6b7280;
@@ -70,9 +70,9 @@
 </head>
 <body>
   <div class="hero">
-    <h1>WorkBuddy AI 工具实战 · 86 件神器导航</h1>
+    <h1>WorkBuddy AI 工具实战 · 92 件神器导航</h1>
     <span class="tag">边学边分享 · 小白版 + 进阶版 · 持续更新</span>
-    <p>这里收录了 WorkBuddy 里全部 86 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯、偏门六大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
+    <p>这里收录了 WorkBuddy 里全部 92 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯、偏门六大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
   </div>
 
   <div class="search">
@@ -80,13 +80,13 @@
   </div>
 
   <div class="tabs" id="tabs">
-    <div class="tab active" data-cat="all">全部 86</div>
+    <div class="tab active" data-cat="all">全部 92</div>
     <div class="tab" data-cat="A">办公协作 10</div>
     <div class="tab" data-cat="B">开发提效 8</div>
     <div class="tab" data-cat="C">金融投资 9</div>
     <div class="tab" data-cat="D">设计创作 19</div>
     <div class="tab" data-cat="E">资讯内容 6</div>
-    <div class="tab" data-cat="F">偏门神器 30</div>
+    <div class="tab" data-cat="F">偏门神器 36</div>
     <div class="tab" data-cat="M">元工具 4</div>
   </div>
 
@@ -224,6 +224,12 @@ const TOOLS = [
   {name:"A股港股价值投资分析",en:"valuation-analysis",cat:"F",desc:"用《股市真规则》方法论拆股票：护城河/财务健康/DCF 估值/管理层/行业/决策整合，出结构化基本面报告（clawhub.ai 第三方技能，需 pdf-parser）。",level:"进阶",status:"需 pdf-parser",connect:"pdf-parser",detail:"valuation-analysis.html"},
   {name:"东方财富宏观数据库",en:"mx-macro-data",cat:"F",desc:"大白话问宏观数据（GDP/CPI/PMI/M2/失业率…），从东方财富库拽数并自动转 CSV+说明 txt，覆盖多领域（clawhub.ai 第三方技能，需 EM_API_KEY）。",level:"进阶",status:"需 EM Key",connect:"东方财富妙想",detail:"mx-macro-data.html"},
   {name:"X/Twitter 搜索·xAI",en:"x-search",cat:"F",desc:"用 xAI Grok 实时搜 X 帖子：按关键词/账号/日期范围，带图文理解与引用链接，做社媒舆情（clawhub.ai 第三方技能，需 XAI_API_KEY）。",level:"进阶",status:"需 XAI Key",connect:"xAI",detail:"x-search.html"},
+  {name:"学习路线图生成器",en:"study-roadmap-generator",cat:"F",desc:"把『我想学X』变成可执行学习路线：阶段划分+每周计划+资源推荐+常见卡点+每日节奏，按目标方向侧重。",level:"小白",status:"即装即用",detail:"study-roadmap-generator.html"},
+  {name:"研究生科研计划助手",en:"graduate-plan-helper",cat:"F",desc:"按研一/研二/研三分段制定课程、科研与毕设计划，拆解周任务、追踪进度、平衡多重任务，缓解延毕焦虑。",level:"小白",status:"即装即用",detail:"graduate-plan-helper.html"},
+  {name:"学科学习助理生成器",en:"academic-learning-assistant",cat:"F",desc:"输入学科+年级+目标，生成专属学习助理（人设/知识树/路径/教法），覆盖16门学科全学段。",level:"小白",status:"即装即用",detail:"academic-learning-assistant.html"},
+  {name:"学术文献PPT生成器",en:"academic-literature-ppt",cat:"F",desc:"把科研论文/文章转成蓝色学术风PPT（含中文翻译），适用于组会、期刊俱乐部、文献汇报。",level:"进阶",status:"需python-pptx",detail:"academic-literature-ppt.html"},
+  {name:"Google Classroom 管理器",en:"google-classroom-education",cat:"F",desc:"经 Google Classroom API 管课程/作业/学生/成绩/公告；需 Google OAuth + ClawLink 托管，配置门槛高。",level:"进阶",status:"需OAuth配置",detail:"google-classroom-education.html"},
+  {name:"论文结论撰写助手",en:"conclusion-assistant",cat:"F",desc:"基于11要素帮你写/改/润色论文结论，结构检查+中英双语，配合论文全流程导师使用。",level:"小白",status:"即装即用",detail:"conclusion-assistant.html"},
   // M 元工具
   {name:"市场安装器",en:"marketplace-skill-installer",cat:"M",desc:"一句话从推荐市场装 Skill，扩展能力零门槛。",level:"小白",status:"即装即用"},
   {name:"ClawdHub 技能市场 CLI",en:"clawdhub",cat:"M",desc:"命令行技能商店：从 clawhub.com 搜 / 装 / 更新 / 发布 AI 技能（clawhub.ai 第三方技能）。",level:"小白",status:"即装即用",detail:"clawdhub.html"},
