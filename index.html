@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WorkBuddy AI 工具实战 · 51 件神器导航</title>
+<title>WorkBuddy AI 工具实战 · 56 件神器导航</title>
 <style>
   :root{
     --bg:#f6f7f9; --card:#ffffff; --ink:#1f2937; --sub:#6b7280;
@@ -70,9 +70,9 @@
 </head>
 <body>
   <div class="hero">
-    <h1>WorkBuddy AI 工具实战 · 51 件神器导航</h1>
+    <h1>WorkBuddy AI 工具实战 · 56 件神器导航</h1>
     <span class="tag">边学边分享 · 小白版 + 进阶版 · 持续更新</span>
-    <p>这里收录了 WorkBuddy 里全部 51 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯五大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
+    <p>这里收录了 WorkBuddy 里全部 56 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯五大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
   </div>
 
   <div class="search">
@@ -80,12 +80,12 @@
   </div>
 
   <div class="tabs" id="tabs">
-    <div class="tab active" data-cat="all">全部 51</div>
+    <div class="tab active" data-cat="all">全部 56</div>
     <div class="tab" data-cat="A">办公协作 10</div>
-    <div class="tab" data-cat="B">开发提效 6</div>
-    <div class="tab" data-cat="C">金融投资 7</div>
+    <div class="tab" data-cat="B">开发提效 8</div>
+    <div class="tab" data-cat="C">金融投资 9</div>
     <div class="tab" data-cat="D">设计创作 19</div>
-    <div class="tab" data-cat="E">资讯内容 5</div>
+    <div class="tab" data-cat="E">资讯内容 6</div>
     <div class="tab" data-cat="M">元工具 4</div>
   </div>
 
@@ -150,6 +150,8 @@ const TOOLS = [
   {name:"GitHub 热门项目",en:"github-trending-cn",cat:"B",desc:"今日 / 本周最火仓库一目了然，找灵感学趋势。",level:"小白",status:"即装即用"},
   {name:"GitHub AI 趋势追踪",en:"github-ai-trends",cat:"B",desc:"专盯 AI 热门项目榜单，跟进行业不掉队。",level:"小白",status:"即装即用"},
   {name:"网页自动化",en:"agent-browser-core",cat:"B",desc:"用命令行操控浏览器：导航、填表、截图、抓数据。",level:"进阶",status:"即装即用",detail:"agent-browser-core.html"},
+  {name:"Nano PDF 自然语言改 PDF",en:"nano-pdf",cat:"B",desc:"用大白话指令改 PDF 指定页：改标题、修错字、换文案，自然语言编辑 PDF（clawhub.ai 第三方技能，下载 11.5 万+）。",level:"小白",status:"即装即用",detail:"nano-pdf.html"},
+  {name:"Drawio 架构图生成器",en:"drawio-pro-skill",cat:"B",desc:"自然语言生成架构图/流程图/ER 图并导出 PNG/SVG/PDF，支持 UML/SysML/泳道/云拓扑/ML 模型图（clawhub.ai 第三方技能，需 draw.io 桌面端）。",level:"进阶",status:"需 draw.io 桌面端",connect:"draw.io",detail:"drawio-pro-skill.html"},
   {name:"创建 Skill",en:"skill-creator",cat:"B",desc:"手把手教你造一个属于自己的 AI 技能。",level:"进阶",status:"即装即用"},
   {name:"专家管理",en:"expert-manager",cat:"B",desc:"把开源项目转成专家包，或管理你的专家库。",level:"进阶",status:"即装即用"},
   // C 金融投资
@@ -160,6 +162,8 @@ const TOOLS = [
   {name:"自然语言金融查询",en:"neodata-financial-search",cat:"C",desc:"说人话查金融：『茅台最近咋样』直接出数据。",level:"小白",status:"即装即用"},
   {name:"小白理财教练",en:"xiaobai-coach",cat:"C",desc:"用生活类比讲理财 / 基金 / 定投，不荐股只启蒙。",level:"小白",status:"即装即用"},
   {name:"Stock Analysis 股币分析",en:"stock-analysis",cat:"C",desc:"用雅虎财经数据做股票/加密分析：八维打分、组合管理、自选股预警、分红分析。",level:"进阶",status:"即装即用",detail:"stock-analysis.html"},
+  {name:"Stock Market Pro 行情分析",en:"stock-market-pro",cat:"C",desc:"Yahoo Finance 驱动的本地行情箱：实时报价/基本面/高清 RSI·MACD·布林带·VWAP·ATR 指标图/一键研报（clawhub.ai 第三方技能，需 uv；覆盖美股/韩股/加密/外汇，非 A 股）。",level:"进阶",status:"即装即用",detail:"stock-market-pro.html"},
+  {name:"Blave Quant 量化交易",en:"blave-quant-skill",cat:"C",desc:"加密/期货/台股的量化 alpha 数据（巨鲸/挤圧动能/板块轮动）+ 多所交易执行（BitMart/OKX/Bybit…）（clawhub.ai 第三方技能，需 Blave API Key；不含 A 股）。",level:"专业",status:"需 Blave API Key",connect:"Blave",detail:"blave-quant-skill.html"},
   // D 设计创作
   {name:"Ardot 设计核心",en:"ardot-design-core",cat:"D",desc:"Ardot 设计中枢，承上启下调度设计能力。",level:"进阶",status:"即装即用"},
   {name:"Ardot 设计路由",en:"ardot-design-router",cat:"D",desc:"把设计任务精准分发给合适的设计模块。",level:"进阶",status:"即装即用"},
@@ -186,6 +190,7 @@ const TOOLS = [
   {name:"长文写作",en:"fbs-bookwriter",cat:"E",desc:"写书 / 白皮书 / 手册 / 长报告，结构化产出不卡壳。",level:"进阶",status:"即装即用",detail:"fbs-bookwriter.html"},
   {name:"云部署",en:"cloudstudio-deploy",cat:"E",desc:"本地静态站一键部署到云端，发链接就能看。",level:"进阶",status:"即装即用"},
   {name:"YouTube 字幕捕手",en:"youtube-watcher",cat:"E",desc:"抓 YouTube 字幕→总结/问答/摘重点，长视频一键变可读文字。",level:"小白",status:"需配 yt-dlp",connect:"yt-dlp",detail:"youtube-watcher.html"},
+  {name:"公众号文章归档器",en:"wechat-article-archive",cat:"E",desc:"公众号文章/小绿书一键存成本地 Markdown+图片，图片下到本地不传云，适合收藏与二次创作（clawhub.ai 第三方技能，需 python+node）。",level:"小白",status:"即装即用",detail:"wechat-article-archive.html"},
   // M 元工具
   {name:"市场安装器",en:"marketplace-skill-installer",cat:"M",desc:"一句话从推荐市场装 Skill，扩展能力零门槛。",level:"小白",status:"即装即用"},
   {name:"ClawdHub 技能市场 CLI",en:"clawdhub",cat:"M",desc:"命令行技能商店：从 clawhub.com 搜 / 装 / 更新 / 发布 AI 技能（clawhub.ai 第三方技能）。",level:"小白",status:"即装即用",detail:"clawdhub.html"},

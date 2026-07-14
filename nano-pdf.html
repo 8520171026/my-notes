@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nano PDF 自然语言改 PDF · 工具详情 | WorkBuddy AI 工具实战</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1f2937;--sub:#6b7280;--line:#e5e7eb;--accent:#0891b2;--ok:#16a34a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 24px 70px}
+  .back{display:inline-block;color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;margin-bottom:18px}
+  .tag{display:inline-block;padding:4px 12px;border-radius:999px;background:#eef2ff;color:var(--accent);font-size:13px;font-weight:600;margin-bottom:12px}
+  h1{font-size:30px;font-weight:800}
+  .en{font-family:ui-monospace,Menlo,monospace;color:var(--sub);font-size:13px;margin-top:6px}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+  .m{font-size:12px;font-weight:600;padding:4px 11px;border-radius:8px;background:#eef2ff;color:#4338ca}
+  .m.ok{background:#dcfce7;color:#15803d}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px}
+  section h2{font-size:20px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--accent)}
+  h3{font-size:16px;margin:18px 0 8px;color:#111827}
+  p,li{color:#374151;font-size:15px}
+  ul,ol{padding-left:22px;margin:6px 0}
+  li{margin:5px 0}
+  .hook{background:#fffbeb;border-color:#fde68a}
+  .hook h2{border-color:#f59e0b}
+  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; 返回 AI 工具导航</a>
+  <div class="tag">开发工具 · 小白友好</div>
+  <h1>Nano PDF 自然语言改 PDF</h1>
+  <div class="en">nano-pdf</div>
+  <div class="meta">
+    <span class="m">分类：开发工具</span>
+    <span class="m ok">即装即用</span>
+    <span class="m">人群：小白友好</span>
+  </div>
+
+  <section>
+    <h2>小白版 · 3 分钟上手</h2>
+    <h3>一句话它是啥</h3>
+    <p>一个“用大白话指令改 PDF 指定页”的小工具——不用开 PDF 编辑器，一句话让 AI 帮你改标题、修错字、换文案。</p>
+    <h3>它能帮你干啥</h3>
+    <ul>
+      <li>改某一页的标题、副标题，修错别字；</li>
+      <li>局部润色/替换文案，不动整份版式；</li>
+      <li>快速改 PPT 导出的 PDF、报告、海报。</li>
+    </ul>
+    <h3>3 步上手</h3>
+    <ol>
+      <li>装好 <code>nano-pdf</code>（<code>uv tool install nano-pdf</code> 或 <code>pip install nano-pdf</code>）；</li>
+      <li>跑命令：<code>nano-pdf edit deck.pdf 1 "把标题改成 Q3 业绩，修掉副标题错别字"</code>；</li>
+      <li>打开生成的 PDF，核对改动。</li>
+    </ol>
+    <h3>常见坑</h3>
+    <ul>
+      <li>页码有 0 基/1 基之分，差一位就改错页，发现不对换一种试试；</li>
+      <li>改完务必人工核对再发出去，AI 改 PDF 偶尔会动到版式；</li>
+      <li>复杂重排（换图、大幅结构调整）它不擅长，那种上专业工具。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>进阶版 · 玩出花</h2>
+    <h3>进阶配置</h3>
+    <p>基于 nano-pdf CLI，可嵌进脚本做批量/自动化。安装靠 <code>uv</code> 或 <code>pip</code>，零配置即可对单页做自然语言编辑。</p>
+    <h3>与其他工具组合</h3>
+    <ul>
+      <li>配「去 AI 味」：先 AI 起草 PDF 文案，再去味更自然；</li>
+      <li>配文档类 skill：批量出周报/月报 PDF 后再微调；</li>
+      <li>配 CI：把 deck 的标题/版本号自动化刷最新。</li>
+    </ul>
+    <h3>自动化玩法</h3>
+    <p>写个小脚本循环多页 deck，按规则批量改标题/页脚/版本标识。</p>
+    <h3>边界与注意</h3>
+    <p>PDF 版式改动能力有限，超出“局部文字编辑”的复杂需求请用专业排版工具；发出前一定人工复核。</p>
+  </section>
+
+  <section class="hook">
+    <h2>多平台衍生钩子</h2>
+    <ul>
+      <li><b>长文标题：</b>《别再手动改 PDF 了：一句话让 AI 帮你改标题修错字》</li>
+      <li><b>PPT 大纲（5 页）：</b>封面 → PDF 编辑的痛 → nano-pdf 怎么用 → 3 个场景 → 行动号召</li>
+      <li><b>短视频钩子（15s）：</b>「改个 PDF 标题还要开编辑器？一句话让 AI 帮你改。」</li>
+    </ul>
+  </section>
+
+  <footer>WorkBuddy AI 工具实战 · 边学边分享 · 每掌握一个工具更新一篇</footer>
+</div>
+</body>
+</html>
