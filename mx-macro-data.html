@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>东方财富宏观数据库 · 工具详情 | WorkBuddy AI 工具实战</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1f2937;--sub:#6b7280;--line:#e5e7eb;--accent:#ec4899;--ok:#16a34a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 24px 70px}
+  .back{display:inline-block;color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;margin-bottom:18px}
+  .tag{display:inline-block;padding:4px 12px;border-radius:999px;background:#fce7f3;color:var(--accent);font-size:13px;font-weight:600;margin-bottom:12px}
+  h1{font-size:30px;font-weight:800}
+  .en{font-family:ui-monospace,Menlo,monospace;color:var(--sub);font-size:13px;margin-top:6px}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+  .m{font-size:12px;font-weight:600;padding:4px 11px;border-radius:8px;background:#fce7f3;color:#be185d}
+  .m.ok{background:#dcfce7;color:#15803d}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px}
+  section h2{font-size:20px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--accent)}
+  h3{font-size:16px;margin:18px 0 8px;color:#111827}
+  p,li{color:#374151;font-size:15px}
+  ul,ol{padding-left:22px;margin:6px 0}
+  li{margin:5px 0}
+  .hook{background:#fffbeb;border-color:#fde68a}
+  .hook h2{border-color:#f59e0b}
+  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; 返回 AI 工具导航</a>
+  <div class="tag">偏门神器 · 进阶向</div>
+  <h1>东方财富宏观数据库</h1>
+  <div class="en">mx-macro-data</div>
+  <div class="meta">
+    <span class="m">分类：偏门神器</span>
+    <span class="m m">需 EM Key</span>
+    <span class="m">人群：进阶向</span>
+  </div>
+
+  <section>
+    <h2>小白版 · 3 分钟上手</h2>
+    <h3>一句话它是啥</h3>
+    <p>用大白话问宏观数据——「中国过去五年 M2 增速」「美国制造业 PMI」——它从东方财富库拽数，还顺手给你 CSV 和说明 txt。</p>
+    <h3>它能帮你干啥</h3>
+    <ul>
+      <li>国民经济核算 / 价格指数 / 货币金融 / 财政 / 外贸 / 就业 / 产业运行等多领域；</li>
+      <li>返回 JSON → 自动转 CSV + 描述文件。</li>
+    </ul>
+    <h3>3 步上手</h3>
+    <ol>
+      <li>申请东方财富妙想 <code>EM_API_KEY</code> 并设为环境变量；</li>
+      <li>说「查询 中国 GDP 同比增速、CPI 同比」；</li>
+      <li>拿生成的 CSV。</li>
+    </ol>
+    <h3>常见坑</h3>
+    <ul>
+      <li>必须说<b>具体指标名</b>（GDP / CPI / PMI…），不能说「中国经济」这种模糊词；</li>
+      <li>地域可宏观（中国 / 美国 / 欧元区）。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>进阶版 · 玩出花</h2>
+    <h3>进阶配置</h3>
+    <p>支持相对时间（今年 / 过去三年 / 上月）和宏观地域（华东 / 中国各省），不用拆省市。</p>
+    <h3>与其他工具组合</h3>
+    <ul>
+      <li>配「valuation-analysis」把宏观变量喂进估值；</li>
+      <li>配「文件整理器」管导出的 CSV 文库。</li>
+    </ul>
+    <h3>自动化玩法</h3>
+    <p>定时拉一组关键宏观指标，生成监测面板。</p>
+    <h3>边界与注意</h3>
+    <p>密钥别硬编码 / 明文暴露；指标要具体，大类商品（稀土 / 农产品）要拆成具体品种。</p>
+  </section>
+
+  <section class="hook">
+    <h2>多平台衍生钩子</h2>
+    <ul>
+      <li><b>长文标题：</b>《用大白话查宏观数据：GDP、CPI、M2 一句话拽出来》</li>
+      <li><b>PPT 大纲（5 页）：</b>封面 → 宏观数据库能干啥 → 查询约束 → 组合玩法 → 行动号召</li>
+      <li><b>短视频钩子（15s）：</b>「写报告要宏观数据？说句人话它就给你 CSV 和说明。」</li>
+    </ul>
+  </section>
+
+  <footer>WorkBuddy AI 工具实战 · 边学边分享 · 每掌握一个工具更新一篇</footer>
+</div>
+</body>
+</html>

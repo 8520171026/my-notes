@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WorkBuddy AI 工具实战 · 69 件神器导航</title>
+<title>WorkBuddy AI 工具实战 · 86 件神器导航</title>
 <style>
   :root{
     --bg:#f6f7f9; --card:#ffffff; --ink:#1f2937; --sub:#6b7280;
@@ -70,9 +70,9 @@
 </head>
 <body>
   <div class="hero">
-    <h1>WorkBuddy AI 工具实战 · 77 件神器导航</h1>
+    <h1>WorkBuddy AI 工具实战 · 86 件神器导航</h1>
     <span class="tag">边学边分享 · 小白版 + 进阶版 · 持续更新</span>
-    <p>这里收录了 WorkBuddy 里全部 77 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯、偏门六大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
+    <p>这里收录了 WorkBuddy 里全部 86 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯、偏门六大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
   </div>
 
   <div class="search">
@@ -80,13 +80,13 @@
   </div>
 
   <div class="tabs" id="tabs">
-    <div class="tab active" data-cat="all">全部 77</div>
+    <div class="tab active" data-cat="all">全部 86</div>
     <div class="tab" data-cat="A">办公协作 10</div>
     <div class="tab" data-cat="B">开发提效 8</div>
     <div class="tab" data-cat="C">金融投资 9</div>
     <div class="tab" data-cat="D">设计创作 19</div>
     <div class="tab" data-cat="E">资讯内容 6</div>
-    <div class="tab" data-cat="F">偏门神器 21</div>
+    <div class="tab" data-cat="F">偏门神器 30</div>
     <div class="tab" data-cat="M">元工具 4</div>
   </div>
 
@@ -215,6 +215,15 @@ const TOOLS = [
   {name:"发票收据整理器",en:"invoice-organizer",cat:"F",desc:"读乱糟发票/收据，提取供应商/日期/金额/描述，统一重命名+按供应商/年份归档，生成给会计的 CSV，报税季救星（awesome 合集第三方技能）。",level:"通用",status:"即装即用",detail:"invoice-organizer.html"},
   {name:"文件整理器",en:"file-organizer",cat:"F",desc:"理解你的文件结构，找重复、建议更好归类、确认后自动清理归置，Downloads 救火/重复清理/项目重构/老文件归档（awesome 合集第三方技能）。",level:"通用",status:"即装即用",detail:"file-organizer.html"},
   {name:"Slack GIF 生成器",en:"slack-gif-creator",cat:"F",desc:"为 Slack 造优化动图：消息 GIF(≤2MB)与 emoji GIF(≤64KB)自带尺寸校验，动画原语(shake/bounce/spin…)自由组合（awesome 合集第三方技能，需 pillow）。",level:"进阶",status:"即装即用",detail:"slack-gif-creator.html"},
+  {name:"CalDAV 日历同步器",en:"caldav-calendar",cat:"F",desc:"把 iCloud/Google/Fastmail/Nextcloud 等 CalDAV 日历同步到命令行，khal 查、vdirsyncer 同步，Linux 党本地管日程（clawhub.ai 第三方技能，需 vdirsyncer/khal）。",level:"进阶",status:"需装依赖",connect:"vdirsyncer/khal",detail:"caldav-calendar.html"},
+  {name:"公众号文章爬虫",en:"wechat-article-spider",cat:"F",desc:"贴公众号文章链接→正文抓成 Markdown+图片下到本地 images/，收藏与二次创作超方便（clawhub.ai 第三方技能，需 python 库）。",level:"进阶",status:"需装依赖",connect:"python 库",detail:"wechat-article-spider.html"},
+  {name:"买手·全网比价",en:"taobao",cat:"F",desc:"说一句想买啥，跨淘宝/天猫/京东/拼多多/抖音/快手等 10 平台比出最优价+优惠券，下单前先比价（clawhub.ai 第三方技能，需 uv）。",level:"小白",status:"需 uv",connect:"uv",detail:"taobao.html"},
+  {name:"SQL 数据库工具箱",en:"sql-toolkit",cat:"F",desc:"命令行玩转 SQLite/PostgreSQL/MySQL：设计表/写查询/迁移/索引/备份/调慢查询，免 ORM（clawhub.ai 第三方技能，零配置可用）。",level:"进阶",status:"即装即用",detail:"sql-toolkit.html"},
+  {name:"MoltGuard·Agent 安全守卫",en:"moltguard",cat:"F",desc:"给 Agent 套护栏：挡提示注入/防数据泄露/拦恶意命令（OpenGuardrails），每天 500 次免费检测。【OpenClaw 平台专属】，WorkBuddy 用户请看内置 AgentGuard。",level:"进阶",status:"OpenClaw 专属",connect:"OpenClaw",detail:"moltguard.html"},
+  {name:"代码/基建安全审计箱",en:"security-audit-toolkit",cat:"F",desc:"给代码库和服务器做安全体检：依赖漏洞/硬编码密钥/OWASP Top10/SSL/TLS/文件权限审计，npm audit+pip-audit（clawhub.ai 第三方技能）。",level:"进阶",status:"需装依赖",connect:"npm/pip",detail:"security-audit-toolkit.html"},
+  {name:"A股港股价值投资分析",en:"valuation-analysis",cat:"F",desc:"用《股市真规则》方法论拆股票：护城河/财务健康/DCF 估值/管理层/行业/决策整合，出结构化基本面报告（clawhub.ai 第三方技能，需 pdf-parser）。",level:"进阶",status:"需 pdf-parser",connect:"pdf-parser",detail:"valuation-analysis.html"},
+  {name:"东方财富宏观数据库",en:"mx-macro-data",cat:"F",desc:"大白话问宏观数据（GDP/CPI/PMI/M2/失业率…），从东方财富库拽数并自动转 CSV+说明 txt，覆盖多领域（clawhub.ai 第三方技能，需 EM_API_KEY）。",level:"进阶",status:"需 EM Key",connect:"东方财富妙想",detail:"mx-macro-data.html"},
+  {name:"X/Twitter 搜索·xAI",en:"x-search",cat:"F",desc:"用 xAI Grok 实时搜 X 帖子：按关键词/账号/日期范围，带图文理解与引用链接，做社媒舆情（clawhub.ai 第三方技能，需 XAI_API_KEY）。",level:"进阶",status:"需 XAI Key",connect:"xAI",detail:"x-search.html"},
   // M 元工具
   {name:"市场安装器",en:"marketplace-skill-installer",cat:"M",desc:"一句话从推荐市场装 Skill，扩展能力零门槛。",level:"小白",status:"即装即用"},
   {name:"ClawdHub 技能市场 CLI",en:"clawdhub",cat:"M",desc:"命令行技能商店：从 clawhub.com 搜 / 装 / 更新 / 发布 AI 技能（clawhub.ai 第三方技能）。",level:"小白",status:"即装即用",detail:"clawdhub.html"},
