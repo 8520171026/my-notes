@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WorkBuddy AI 工具实战 · 92 件神器导航</title>
+<title>WorkBuddy AI 工具实战 · 102 件神器导航</title>
 <style>
   :root{
     --bg:#f6f7f9; --card:#ffffff; --ink:#1f2937; --sub:#6b7280;
@@ -70,9 +70,9 @@
 </head>
 <body>
   <div class="hero">
-    <h1>WorkBuddy AI 工具实战 · 92 件神器导航</h1>
+    <h1>WorkBuddy AI 工具实战 · 102 件神器导航</h1>
     <span class="tag">边学边分享 · 小白版 + 进阶版 · 持续更新</span>
-    <p>这里收录了 WorkBuddy 里全部 92 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯、偏门六大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
+    <p>这里收录了 WorkBuddy 里全部 102 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯、偏门六大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
   </div>
 
   <div class="search">
@@ -80,13 +80,13 @@
   </div>
 
   <div class="tabs" id="tabs">
-    <div class="tab active" data-cat="all">全部 92</div>
+    <div class="tab active" data-cat="all">全部 102</div>
     <div class="tab" data-cat="A">办公协作 10</div>
     <div class="tab" data-cat="B">开发提效 8</div>
     <div class="tab" data-cat="C">金融投资 9</div>
     <div class="tab" data-cat="D">设计创作 19</div>
     <div class="tab" data-cat="E">资讯内容 6</div>
-    <div class="tab" data-cat="F">偏门神器 36</div>
+    <div class="tab" data-cat="F">偏门神器 46</div>
     <div class="tab" data-cat="M">元工具 4</div>
   </div>
 
@@ -230,6 +230,16 @@ const TOOLS = [
   {name:"学术文献PPT生成器",en:"academic-literature-ppt",cat:"F",desc:"把科研论文/文章转成蓝色学术风PPT（含中文翻译），适用于组会、期刊俱乐部、文献汇报。",level:"进阶",status:"需python-pptx",detail:"academic-literature-ppt.html"},
   {name:"Google Classroom 管理器",en:"google-classroom-education",cat:"F",desc:"经 Google Classroom API 管课程/作业/学生/成绩/公告；需 Google OAuth + ClawLink 托管，配置门槛高。",level:"进阶",status:"需OAuth配置",detail:"google-classroom-education.html"},
   {name:"论文结论撰写助手",en:"conclusion-assistant",cat:"F",desc:"基于11要素帮你写/改/润色论文结论，结构检查+中英双语，配合论文全流程导师使用。",level:"小白",status:"即装即用",detail:"conclusion-assistant.html"},
+  {name:"市场调研器",en:"market-research",cat:"F",desc:"进入新市场、摸底竞品、做用户需求洞察前的结构化调研方法。",level:"小白",status:"即装即用",detail:"market-research.html"},
+  {name:"竞品平台分析",en:"competitive-platform-analysis",cat:"F",desc:"选平台、写竞品报告、做对标分析的结构化框架。",level:"进阶",status:"即装即用",detail:"competitive-platform-analysis.html"},
+  {name:"投资人材料生成",en:"investor-materials",cat:"F",desc:"融资路演、写BP、准备投资人问答时的材料组织方法。",level:"小白",status:"即装即用",detail:"investor-materials.html"},
+  {name:"品牌发现访谈",en:"brand-discovery",cat:"F",desc:"品牌定位、创始人/用户深度访谈的结构化方法。",level:"进阶",status:"即装即用",detail:"brand-discovery.html"},
+  {name:"内容引擎",en:"content-engine",cat:"F",desc:"批量产内容、做改编分发的源优先工作流。",level:"小白",status:"即装即用",detail:"content-engine.html"},
+  {name:"跨平台分发",en:"crosspost",cat:"F",desc:"同一内容发多个社媒平台时的顺序与雷区管理。",level:"小白",status:"即装即用",detail:"crosspost.html"},
+  {name:"深度研究",en:"deep-research",cat:"F",desc:"做深度主题研究、写带证据综合报告的工作流。",level:"进阶",status:"需搜索MCP",detail:"deep-research.html"},
+  {name:"ML工程工作流",en:"mle-workflow",cat:"F",desc:"做ML实验、搭训练/评估流水线的系统方法。",level:"进阶",status:"需ML环境",detail:"mle-workflow.html"},
+  {name:"长文写作",en:"article-writing",cat:"F",desc:"写博客、深度长文、专栏的结构化写作流程。",level:"小白",status:"即装即用",detail:"article-writing.html"},
+  {name:"前端幻灯片",en:"frontend-slides",cat:"F",desc:"做技术分享、把前端/产品讲清楚的内容结构方法。",level:"小白",status:"即装即用",detail:"frontend-slides.html"},
   // M 元工具
   {name:"市场安装器",en:"marketplace-skill-installer",cat:"M",desc:"一句话从推荐市场装 Skill，扩展能力零门槛。",level:"小白",status:"即装即用"},
   {name:"ClawdHub 技能市场 CLI",en:"clawdhub",cat:"M",desc:"命令行技能商店：从 clawhub.com 搜 / 装 / 更新 / 发布 AI 技能（clawhub.ai 第三方技能）。",level:"小白",status:"即装即用",detail:"clawdhub.html"},
