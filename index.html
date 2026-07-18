@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WorkBuddy AI 工具实战 · 104 件神器导航</title>
+<title>WorkBuddy AI 工具实战 · 120 件神器导航</title>
 <style>
   :root{
     --bg:#f6f7f9; --card:#ffffff; --ink:#1f2937; --sub:#6b7280;
@@ -70,9 +70,9 @@
 </head>
 <body>
   <div class="hero">
-    <h1>WorkBuddy AI 工具实战 · 104 件神器导航</h1>
+    <h1>WorkBuddy AI 工具实战 · 120 件神器导航</h1>
     <span class="tag">边学边分享 · 小白版 + 进阶版 · 持续更新</span>
-    <p>这里收录了 WorkBuddy 里全部 104 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯、偏门六大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
+    <p>这里收录了 WorkBuddy 里全部 120 个开箱即用的 AI 工具能力，按办公、开发、金融、设计、资讯、偏门六大类归好。点开任意工具，照着就能上手——学一个、用会一个、分享一个。</p>
   </div>
 
   <div class="search">
@@ -80,13 +80,13 @@
   </div>
 
   <div class="tabs" id="tabs">
-    <div class="tab active" data-cat="all">全部 104</div>
+    <div class="tab active" data-cat="all">全部 120</div>
     <div class="tab" data-cat="A">办公协作 10</div>
     <div class="tab" data-cat="B">开发提效 8</div>
     <div class="tab" data-cat="C">金融投资 9</div>
     <div class="tab" data-cat="D">设计创作 19</div>
     <div class="tab" data-cat="E">资讯内容 6</div>
-    <div class="tab" data-cat="F">偏门神器 48</div>
+    <div class="tab" data-cat="F">偏门神器 64</div>
     <div class="tab" data-cat="M">元工具 4</div>
   </div>
 
@@ -242,6 +242,22 @@ const TOOLS = [
   {name:"前端幻灯片",en:"frontend-slides",cat:"F",desc:"做技术分享、把前端/产品讲清楚的内容结构方法。",level:"小白",status:"即装即用",detail:"frontend-slides.html"},
   {name:"商务谈判",en:"negotiation",cat:"F",desc:"做谈判、报价博弈、合同条款拉扯的结构化方法（评分框架+对手风格）。",level:"进阶",status:"即装即用",detail:"negotiation.html"},
   {name:"客户成功经理",en:"customer-success-manager",cat:"F",desc:"做客户成功、留存运营、续费管理的系统方法（话术+模板+最佳实践）。",level:"通用",status:"即装即用",detail:"customer-success-manager.html"},
+  {name:"SEO 审计优化",en:"seo-audit",cat:"F",desc:"给网站做 SEO 体检：技术/内容/外链/结构逐层查漏，按优先级出修复清单（GitHub 第三方技能，★37k）。",level:"进阶",status:"即装即用",detail:"seo-audit.html"},
+  {name:"程序化 SEO",en:"seo-programmatic",cat:"F",desc:"用模板+数据批量生成长尾页面(pSEO)，吃透中长尾搜索量，一套模板喂千词（GitHub 第三方技能，★11k）。",level:"进阶",status:"即装即用",detail:"seo-programmatic.html"},
+  {name:"联盟营销",en:"affiliate-marketing",cat:"F",desc:"选品→建站→内容→转化→追踪的联盟营销闭环，靠佣金睡觉，不囤货（GitHub 第三方技能）。",level:"进阶",status:"即装即用",detail:"affiliate-marketing.html"},
+  {name:"无货源电商",en:"dropshipping",cat:"F",desc:"零库存开店：供应商直发，你只管选品、建店、跑广告拿差价，测品出单自动履约（GitHub 第三方技能）。",level:"小白",status:"即装即用",detail:"dropshipping.html"},
+  {name:"冷邮获客",en:"cold-email",cat:"F",desc:"给陌生决策人发冷邮拿回复：定位→名单→钩子→跟进的结构化打法，B2B 获客利器（GitHub 第三方，★37k）。",level:"进阶",status:"即装即用",detail:"cold-email.html"},
+  {name:"定价策略",en:"pricing",cat:"F",desc:"给产品定价的系统方法：价值锚、套餐分层、心理价位、调价实验，客单价悄悄抬（GitHub 第三方，★37k）。",level:"进阶",status:"即装即用",detail:"pricing.html"},
+  {name:"销售赋能",en:"sales-enablement",cat:"F",desc:"给销售团队供弹药：话术库、异议处理、Demo 脚本、赢单复盘，把赢单变可复制（GitHub 第三方，★37k）。",level:"进阶",status:"即装即用",detail:"sales-enablement.html"},
+  {name:"广告投放",en:"ads",cat:"F",desc:"投前→建广告→定向→素材→优化→归因的全流程投放方法论，ROAS 闭环（GitHub 第三方，★37k）。",level:"进阶",status:"即装即用",detail:"ads.html"},
+  {name:"营销文案",en:"copywriting",cat:"F",desc:"写让人掏钱/点开的文案：钩子、痛点、卖点、CTA 的结构化公式（GitHub 第三方，★77k）。",level:"通用",status:"即装即用",detail:"copywriting.html"},
+  {name:"增长黑客",en:"growth-hacking-playbook",cat:"F",desc:"用低成本实验矩阵撬增长：漏斗拆解、杠杆渠道、病毒系数，小杠杆撬大数（GitHub 第三方技能）。",level:"进阶",status:"即装即用",detail:"growth-hacking-playbook.html"},
+  {name:"产品发布",en:"product-launch",cat:"F",desc:"从预热到发售的发布剧本：名单积累、悬念、发售日节奏，上新变排队抢购（GitHub 第三方技能）。",level:"通用",status:"即装即用",detail:"product-launch.html"},
+  {name:"B2B 线索获取",en:"lead-generation",cat:"F",desc:"用钩子内容+落地页+自动化把陌生访客变成可跟进线索，流量变出单（GitHub 第三方，★376）。",level:"进阶",status:"即装即用",detail:"lead-generation.html"},
+  {name:"变现策略",en:"monetization-strategy",cat:"F",desc:"给产品/内容选变现模型：订阅/一次性/广告/佣金/增值的取舍，流量变现金（GitHub 第三方，★1.6k）。",level:"进阶",status:"即装即用",detail:"monetization-strategy.html"},
+  {name:"邮件营销",en:"email-marketing",cat:"F",desc:"用邮件做留存与复购：分段、自动化序列、内容节奏、送达率，一次购买变长期复购（GitHub 第三方）。",level:"通用",status:"即装即用",detail:"email-marketing.html"},
+  {name:"高转化落地页",en:"landing-page-guide",cat:"F",desc:"搭一页说服陌生人下单的落地页：结构、文案、信任、CTA，A/B 提转化（GitHub 第三方，★888）。",level:"通用",status:"即装即用",detail:"landing-page-guide.html"},
+  {name:"自由职业接单",en:"freelance-gig-finder",cat:"F",desc:"在自由职业平台找高价值活儿、写赢标提案、定价的接单打法，中标率翻倍（GitHub 第三方，★2k）。",level:"小白",status:"即装即用",detail:"freelance-gig-finder.html"},
   // M 元工具
   {name:"市场安装器",en:"marketplace-skill-installer",cat:"M",desc:"一句话从推荐市场装 Skill，扩展能力零门槛。",level:"小白",status:"即装即用"},
   {name:"ClawdHub 技能市场 CLI",en:"clawdhub",cat:"M",desc:"命令行技能商店：从 clawhub.com 搜 / 装 / 更新 / 发布 AI 技能（clawhub.ai 第三方技能）。",level:"小白",status:"即装即用",detail:"clawdhub.html"},
